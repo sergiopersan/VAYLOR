@@ -1,3 +1,4 @@
+
 // --------------------------------------------------
 // GAMEVAULT — Punto de entrada principal
 // Importa y coordina todos los módulos del proyecto
@@ -15,13 +16,13 @@ import { loadGameCatalog, getFilteredCatalogGames, renderCatalogCard, catalogGam
 
 const $ = (selector) => document.querySelector(selector);
 
-const gameGrid    = $("#game-grid");
-const emptyState  = $("#empty-state");
+const gameGrid = $("#game-grid");
+const emptyState = $("#empty-state");
 const searchInput = $("#search-input");
 const genreFilter = $("#genre-filter");
-const sortFilter  = $("#sort-filter");
-const dialog      = $("#game-dialog");
-const form        = $("#game-form");
+const sortFilter = $("#sort-filter");
+const dialog = $("#game-dialog");
+const form = $("#game-form");
 
 let activeView = "all";
 
@@ -41,12 +42,12 @@ function getFilteredGames() {
 
     let filtered = games.filter((game) => {
         const matchesSearch = game.name.toLocaleLowerCase("es").includes(query);
-        const matchesGenre  = genre === "all" || game.genre === genre;
+        const matchesGenre = genre === "all" || game.genre === genre;
 
         let matchesView = true;
-        if (activeView === "playing")   matchesView = game.status === "playing";
+        if (activeView === "playing") matchesView = game.status === "playing";
         else if (activeView === "completed") matchesView = game.status === "completed";
-        else if (activeView === "wishlist")  matchesView = game.status === "wishlist";
+        else if (activeView === "wishlist") matchesView = game.status === "wishlist";
         else if (activeView === "favorites") matchesView = game.favorite;
 
         return matchesSearch && matchesGenre && matchesView;
@@ -54,9 +55,9 @@ function getFilteredGames() {
 
     switch (sortFilter.value) {
         case "rating": filtered.sort((a, b) => b.rating - a.rating); break;
-        case "hours":  filtered.sort((a, b) => b.hours  - a.hours);  break;
+        case "hours": filtered.sort((a, b) => b.hours - a.hours); break;
         case "recent": filtered.sort((a, b) => b.addedAt - a.addedAt); break;
-        default:       filtered.sort((a, b) => a.name.localeCompare(b.name, "es"));
+        default: filtered.sort((a, b) => a.name.localeCompare(b.name, "es"));
     }
 
     return filtered;
@@ -136,12 +137,12 @@ function renderGames() {
         $("#visible-count").textContent = filtered.length;
         gameGrid.innerHTML = filtered.map(g => renderCatalogCard(g, games)).join("");
 
-        emptyState.hidden  = filtered.length !== 0;
-        gameGrid.hidden    = filtered.length === 0;
+        emptyState.hidden = filtered.length !== 0;
+        gameGrid.hidden = filtered.length === 0;
 
         if (filtered.length === 0) {
             emptyState.querySelector("h3").textContent = "No encontramos juegos en el catálogo";
-            emptyState.querySelector("p").textContent  = "Prueba con otra búsqueda o selecciona otro género.";
+            emptyState.querySelector("p").textContent = "Prueba con otra búsqueda o selecciona otro género.";
             const btn = emptyState.querySelector("#empty-add");
             if (btn) btn.hidden = true;
         }
@@ -156,11 +157,11 @@ function renderGames() {
     gameGrid.innerHTML = filtered.map(renderLibraryCardInline).join("");
 
     emptyState.hidden = filtered.length !== 0;
-    gameGrid.hidden   = filtered.length === 0;
+    gameGrid.hidden = filtered.length === 0;
 
     if (filtered.length === 0) {
         emptyState.querySelector("h3").textContent = "No encontramos juegos";
-        emptyState.querySelector("p").textContent  = "Prueba otra búsqueda o añade un nuevo videojuego.";
+        emptyState.querySelector("p").textContent = "Prueba otra búsqueda o añade un nuevo videojuego.";
         const btn = emptyState.querySelector("#empty-add");
         if (btn) btn.hidden = false;
     }
@@ -173,11 +174,11 @@ function renderGames() {
 // --------------------------------------------------
 
 const viewTitles = {
-    all:       "Mi biblioteca",
-    catalog:   "Juegos",
-    playing:   "Jugando",
+    all: "Mi biblioteca",
+    catalog: "Juegos",
+    playing: "Jugando",
     completed: "Completados",
-    wishlist:  "Lista de deseos",
+    wishlist: "Lista de deseos",
     favorites: "Favoritos"
 };
 
@@ -218,7 +219,7 @@ document.querySelectorAll(".nav-link").forEach((btn) => {
 
 function openAddDialog() {
     form.reset();
-    $("#game-id").value    = "";
+    $("#game-id").value = "";
     $("#game-hours").value = "0";
     $("#game-rating").value = "8";
     $("#dialog-title").textContent = "Añadir videojuego";
@@ -230,14 +231,14 @@ function openEditDialog(id) {
     const game = games.find(item => item.id === id);
     if (!game) return;
 
-    $("#game-id").value       = game.id;
-    $("#game-name").value     = game.name;
-    $("#game-cover").value    = game.cover || "";
-    $("#game-genre").value    = game.genre;
+    $("#game-id").value = game.id;
+    $("#game-name").value = game.name;
+    $("#game-cover").value = game.cover || "";
+    $("#game-genre").value = game.genre;
     $("#game-platform").value = game.platform;
-    $("#game-status").value   = game.status;
-    $("#game-hours").value    = game.hours;
-    $("#game-rating").value   = game.rating;
+    $("#game-status").value = game.status;
+    $("#game-hours").value = game.hours;
+    $("#game-rating").value = game.rating;
     $("#dialog-title").textContent = "Editar videojuego";
 
     dialog.showModal();
@@ -253,10 +254,10 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
 
-    const idValue  = $("#game-id").value;
+    const idValue = $("#game-id").value;
     const existing = idValue ? games.find(g => g.id === Number(idValue)) : null;
 
-    const name  = $("#game-name").value.trim();
+    const name = $("#game-name").value.trim();
     const cover = $("#game-cover").value.trim();
 
     if (!name) { showToast("Introduce el nombre del videojuego."); return; }
@@ -273,17 +274,17 @@ form.addEventListener("submit", (event) => {
     }
 
     const game = normalizeGame({
-        id:       existing ? existing.id : Date.now(),
+        id: existing ? existing.id : Date.now(),
         name,
-        appId:    existing ? existing.appId : null,
+        appId: existing ? existing.appId : null,
         cover,
-        genre:    $("#game-genre").value,
+        genre: $("#game-genre").value,
         platform: $("#game-platform").value,
-        status:   $("#game-status").value,
-        hours:    $("#game-hours").value,
-        rating:   $("#game-rating").value,
+        status: $("#game-status").value,
+        hours: $("#game-hours").value,
+        rating: $("#game-rating").value,
         favorite: existing ? existing.favorite : false,
-        addedAt:  existing ? existing.addedAt  : Date.now()
+        addedAt: existing ? existing.addedAt : Date.now()
     });
 
     if (existing) {
@@ -306,7 +307,7 @@ gameGrid.addEventListener("click", (event) => {
     // Añadir desde catálogo
     const catalogBtn = event.target.closest("button[data-action='add-from-catalog']");
     if (catalogBtn) {
-        const catalogId   = catalogBtn.dataset.catalogId;
+        const catalogId = catalogBtn.dataset.catalogId;
         const catalogItem = catalogGames.find(item => String(item.id || item.title) === catalogId);
         if (!catalogItem) return;
 
@@ -320,17 +321,17 @@ gameGrid.addEventListener("click", (event) => {
         if (alreadyExists) { showToast("Ese juego ya está en tu biblioteca."); return; }
 
         const newGame = normalizeGame({
-            id:       Date.now(),
+            id: Date.now(),
             name,
-            appId:    catalogItem.appId ?? null,
-            cover:    catalogItem.cover || "",
-            genre:    Array.isArray(catalogItem.genres) ? (catalogItem.genres[0] || "Otro") : (catalogItem.genre || "Otro"),
+            appId: catalogItem.appId ?? null,
+            cover: catalogItem.cover || "",
+            genre: Array.isArray(catalogItem.genres) ? (catalogItem.genres[0] || "Otro") : (catalogItem.genre || "Otro"),
             platform: Array.isArray(catalogItem.platforms) ? (catalogItem.platforms.join(", ") || "PC") : (catalogItem.platform || "PC"),
-            status:   "backlog",
-            hours:    0,
-            rating:   typeof catalogItem.rating === "number" ? catalogItem.rating : 0,
+            status: "backlog",
+            hours: 0,
+            rating: typeof catalogItem.rating === "number" ? catalogItem.rating : 0,
             favorite: false,
-            addedAt:  Date.now()
+            addedAt: Date.now()
         });
 
         games.push(newGame);
@@ -344,9 +345,9 @@ gameGrid.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-action]");
     if (!button) return;
 
-    const id     = Number(button.dataset.id);
+    const id = Number(button.dataset.id);
     const action = button.dataset.action;
-    const game   = games.find(item => item.id === id);
+    const game = games.find(item => item.id === id);
     if (!game) return;
 
     if (action === "favorite") {
@@ -359,7 +360,7 @@ gameGrid.addEventListener("click", (event) => {
         showToast(updated.favorite ? "Añadido a favoritos." : "Eliminado de favoritos.");
     }
 
-    if (action === "edit")   openEditDialog(id);
+    if (action === "edit") openEditDialog(id);
 
     if (action === "delete") {
         if (!window.confirm(`¿Quieres eliminar "${game.name}" de tu biblioteca?`)) return;
@@ -374,9 +375,9 @@ gameGrid.addEventListener("click", (event) => {
 // Búsqueda, filtros y accesibilidad de teclado
 // --------------------------------------------------
 
-searchInput.addEventListener("input",  renderGames);
+searchInput.addEventListener("input", renderGames);
 genreFilter.addEventListener("change", renderGames);
-sortFilter.addEventListener("change",  renderGames);
+sortFilter.addEventListener("change", renderGames);
 
 document.addEventListener("keydown", (event) => {
     const isTyping = ["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName);
@@ -400,4 +401,18 @@ $("#current-year").textContent = new Date().getFullYear();
 // Carga el catálogo externo y renderiza la vista inicial
 loadGameCatalog().then(() => {
     renderGames();
+});
+
+// --------------------------------------------------
+// Bottom nav móvil: conectar con setView
+// --------------------------------------------------
+
+document.querySelectorAll(".mobile-nav-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        setView(btn.dataset.view);
+        // Sincronizar estado activo del bottom nav
+        document.querySelectorAll(".mobile-nav-btn").forEach(b =>
+            b.classList.toggle("active", b.dataset.view === btn.dataset.view)
+        );
+    });
 });
