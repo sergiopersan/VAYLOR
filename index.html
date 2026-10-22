@@ -17,6 +17,14 @@
 </head>
 
 <body>
+
+    <!-- Pantalla de carga -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <img src="assets/icon.png" alt="Vaylor" class="splash-logo">
+            <span class="splash-name">VAYLOR</span>
+        </div>
+    </div>
     <div class="app-layout">
         <aside class="sidebar">
             <a class="brand" href="#" aria-label="GameVault, inicio">
@@ -275,6 +283,16 @@
     </dialog>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const splash = document.getElementById('splash-screen');
+            setTimeout(() => {
+                splash.classList.add('splash-hidden');
+                splash.addEventListener('transitionend', () => splash.remove(), { once: true });
+            }, 2000);
+        });
+    </script>
 </body>
 
 </html>
