@@ -1,0 +1,320 @@
+/* ==========================================================================
+   LAYOUT: Estructura general, sidebar, cabecera, hero section y pie de página
+   ========================================================================== */
+
+.app-layout {
+    min-height: 100vh;
+}
+
+/* Sidebar lateral */
+.sidebar {
+    width: 246px;
+    position: fixed;
+    inset: 0 auto 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 19px 18px;
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+    z-index: 5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 0 0 49px 4px;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand-icon {
+    display: block;
+    width: 37px;
+    height: 37px;
+    border-radius: 11px;
+    box-shadow: 0 5px 24px #895cf444;
+    object-fit: cover;
+}
+
+.brand-accent {
+    color: var(--purple);
+}
+
+.side-label,
+.eyebrow {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.side-label {
+    padding-left: 12px;
+    margin-bottom: 14px;
+}
+
+.navigation {
+    display: grid;
+    gap: 6px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 13px;
+    color: #a6a4b4;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: left;
+    transition: background 180ms, color 180ms;
+}
+
+.nav-link:hover {
+    background: #ffffff08;
+    color: white;
+}
+
+.nav-link.active {
+    background: #9b7aff16;
+    border-color: #a78bfa20;
+    color: #c8b7ff;
+}
+
+.nav-icon {
+    width: 19px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.sidebar-promo {
+    padding: 17px;
+    background: linear-gradient(145deg, #282036, #1b1924);
+    border: 1px solid #443455;
+    border-radius: 14px;
+}
+
+.promo-symbol {
+    color: var(--purple);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.sidebar-promo strong {
+    display: block;
+    font-size: 13px;
+}
+
+.sidebar-promo p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 9px 0 0;
+}
+
+.sidebar-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 4px 0;
+    color: #666575;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sidebar-footer span {
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+/* Área de contenido principal */
+.main-content {
+    margin-left: 246px;
+    padding: 0 42px;
+    min-height: 100vh;
+    max-width: 1800px;
+}
+
+/* Cabecera / Topbar */
+.topbar {
+    height: 77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.breadcrumb,
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.breadcrumb {
+    color: #a8a5b4;
+    font-size: 12px;
+}
+
+.breadcrumb strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.muted,
+.sync-label {
+    color: var(--muted);
+}
+
+.sync-label {
+    font-size: 11px;
+}
+
+.online-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 10px #65d6a455;
+}
+
+.avatar {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 11px;
+    background: #292333;
+    border: 1px solid #47375f;
+    cursor: pointer;
+    box-shadow: 0 3px 12px #00000044;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Sección de bienvenida (Hero banner) */
+.welcome {
+    min-height: 232px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 42px;
+    margin: 27px 0 23px;
+    border: 1px solid #373047;
+    border-radius: 19px;
+    background:
+        radial-gradient(ellipse at 80% 60%, #8255ce25, transparent 42%),
+        linear-gradient(110deg, #201b2c, #17161f 66%, #211a2b);
+}
+
+.welcome>div:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome .eyebrow {
+    color: #b9a1ff;
+}
+
+.welcome h1 {
+    margin: 15px 0 10px;
+    font-size: clamp(29px, 3vw, 43px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.welcome h1 span {
+    color: var(--purple);
+}
+
+.welcome-description {
+    max-width: 410px;
+    margin: 0;
+    color: #aaa5ba;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.welcome-art {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+}
+
+.art-orbit {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid #b7a0ff24;
+    border-radius: 50%;
+}
+
+.orbit-two {
+    width: 165px;
+    height: 165px;
+    border-color: #b7a0ff3d;
+}
+
+.art-core {
+    display: block;
+    width: 95px;
+    height: 95px;
+    border-radius: 26px;
+    transform: rotate(-10deg);
+    box-shadow: 0 0 70px #9666f355, 0 10px 30px #00000088;
+    object-fit: cover;
+}
+
+.art-star {
+    position: absolute;
+    color: #d0bdff;
+}
+
+.star-one {
+    right: 25px;
+    top: 60px;
+    font-size: 27px;
+}
+
+.star-two {
+    left: 12px;
+    bottom: 62px;
+    font-size: 22px;
+}
+
+/* Pie de página */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+    color: #777585;
+    font-size: 10px;
+}
+
+.footer-heart {
+    color: #c294ff;
+}

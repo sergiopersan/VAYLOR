@@ -1,0 +1,195 @@
+/* ==========================================================================
+   RESPONSIVE: Media queries para diseño adaptativo en tablets y móviles
+   ========================================================================== */
+
+@media (min-width: 1500px) {
+    .game-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        padding: 0 25px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .welcome-art {
+        right: 0;
+        opacity: 0.65;
+    }
+}
+
+@media (max-width: 850px) {
+    .sidebar {
+        width: 76px;
+        padding: 25px 10px 14px;
+        align-items: center;
+    }
+
+    .brand {
+        margin: 0 0 38px;
+    }
+
+    .brand>span:last-child,
+    .side-label,
+    .nav-link:not(.active) {
+        font-size: 0;
+    }
+
+    .brand>span:last-child,
+    .sidebar-promo,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 12px 0;
+        font-size: 0;
+    }
+
+    .nav-icon {
+        font-size: 20px;
+    }
+
+    .main-content {
+        margin-left: 76px;
+        padding: 0 20px;
+    }
+
+    .toolbar {
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        flex-basis: 100%;
+    }
+
+    .select-wrap,
+    .select-wrap select {
+        flex: 1;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .welcome {
+        padding: 30px;
+    }
+
+    .welcome-art {
+        right: -90px;
+        opacity: 0.35;
+    }
+}
+
+@media (max-width: 520px) {
+    .main-content {
+        padding: 0 14px;
+    }
+
+    .topbar {
+        height: 62px;
+    }
+
+    .sync-label,
+    .online-dot {
+        display: none;
+    }
+
+    .welcome {
+        min-height: 210px;
+        padding: 24px 19px;
+        margin-top: 18px;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+    .welcome-description {
+        max-width: 245px;
+        font-size: 11px;
+    }
+
+    .welcome-art {
+        right: -145px;
+    }
+
+    .stats-grid {
+        gap: 9px;
+        margin-bottom: 32px;
+    }
+
+    .stat-card {
+        padding: 13px;
+    }
+
+    .stat-top {
+        font-size: 10px;
+    }
+
+    .stat-card>strong {
+        font-size: 25px;
+    }
+
+    .section-heading {
+        align-items: start;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .section-heading>.primary-button {
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px 10px;
+    }
+
+    .game-info {
+        padding: 10px 8px;
+    }
+
+    .game-title {
+        font-size: 12px;
+    }
+
+    .card-action {
+        font-size: 9px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .game-dialog {
+        padding: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

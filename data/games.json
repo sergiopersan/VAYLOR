@@ -1,0 +1,3287 @@
+{
+    "games": [
+        {
+            "id": "minecraft",
+            "title": "Minecraft",
+            "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/250900/library_600x900.jpg",
+            "genres": [
+                "Sandbox",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2011-11-18",
+            "developer": "Mojang Studios",
+            "publisher": "Mojang Studios",
+            "description": "Explora, construye y sobrevive en un mundo generado por bloques.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "the-witcher-3",
+            "title": "The Witcher 3: Wild Hunt",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/292030/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Mundo abierto",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2015-05-18",
+            "developer": "CD Projekt Red",
+            "publisher": "CD Projekt",
+            "description": "Acompaña a Geralt de Rivia en una aventura de fantasía oscura.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "elden-ring",
+            "title": "Elden Ring",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Soulslike"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2022-02-25",
+            "developer": "FromSoftware",
+            "publisher": "Bandai Namco Entertainment",
+            "description": "Explora las Tierras Intermedias en un desafiante RPG de acción.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "cyberpunk-2077",
+            "title": "Cyberpunk 2077",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-12-10",
+            "developer": "CD Projekt Red",
+            "publisher": "CD Projekt",
+            "description": "Sumérgete en Night City, una metrópolis futurista dominada por la tecnología.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "red-dead-redemption-2",
+            "title": "Red Dead Redemption 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2018-10-26",
+            "developer": "Rockstar Games",
+            "publisher": "Rockstar Games",
+            "description": "Vive la historia de Arthur Morgan en el ocaso del Salvaje Oeste.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "baldurs-gate-3",
+            "title": "Baldur's Gate 3",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1086940/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Fantasía",
+                "Estrategia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2023-08-03",
+            "developer": "Larian Studios",
+            "publisher": "Larian Studios",
+            "description": "Forja tu propia aventura en un RPG de fantasía basado en Dungeons & Dragons.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "stardew-valley",
+            "title": "Stardew Valley",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/413150/library_600x900.jpg",
+            "genres": [
+                "Simulación",
+                "Granja",
+                "RPG"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2016-02-26",
+            "developer": "ConcernedApe",
+            "publisher": "ConcernedApe",
+            "description": "Construye tu granja, conoce a tus vecinos y crea una nueva vida en el valle.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "hollow-knight",
+            "title": "Hollow Knight",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/367520/library_600x900.jpg",
+            "genres": [
+                "Metroidvania",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2017-02-24",
+            "developer": "Team Cherry",
+            "publisher": "Team Cherry",
+            "description": "Desciende a un antiguo reino subterráneo lleno de secretos y desafíos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "portal-2",
+            "title": "Portal 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/620/library_600x900.jpg",
+            "genres": [
+                "Puzles",
+                "Plataformas",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2011-04-19",
+            "developer": "Valve",
+            "publisher": "Valve",
+            "description": "Resuelve ingeniosos rompecabezas utilizando un dispositivo de portales.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "grand-theft-auto-v",
+            "title": "Grand Theft Auto V",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/271590/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Mundo abierto",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2013-09-17",
+            "developer": "Rockstar North",
+            "publisher": "Rockstar Games",
+            "description": "Explora Los Santos y vive una historia criminal con tres protagonistas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "hades",
+            "title": "Hades",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1145360/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-09-17",
+            "developer": "Supergiant Games",
+            "publisher": "Supergiant Games",
+            "description": "Desafía al dios de los muertos y lucha para escapar del Inframundo en este roguelike de acción.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "god-of-war",
+            "title": "God of War",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1593500/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2022-01-14",
+            "developer": "Santa Monica Studio",
+            "publisher": "PlayStation PC LLC",
+            "description": "Acompaña a Kratos y Atreus en un viaje épico a través de las tierras nórdicas de dioses y monstruos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "sekiro-shadows-die-twice",
+            "title": "Sekiro: Shadows Die Twice",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/814380/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Soulslike",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2019-03-22",
+            "developer": "FromSoftware",
+            "publisher": "Activision",
+            "description": "Encarna al Lobo Manco y desata tu venganza en el Japón del período Sengoku.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "doom-eternal",
+            "title": "DOOM Eternal",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/782330/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-03-20",
+            "developer": "id Software",
+            "publisher": "Bethesda Softworks",
+            "description": "Los ejércitos del infierno han invadido la Tierra. Conviértete en el Slayer y arrasa con las hordas demoníacas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "terraria",
+            "title": "Terraria",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/105600/library_600x900.jpg",
+            "genres": [
+                "Sandbox",
+                "Supervivencia",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2011-05-16",
+            "developer": "Re-Logic",
+            "publisher": "Re-Logic",
+            "description": "Excava, combate, explora y construye en este clásico mundo 2D de aventuras infinitas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "celeste",
+            "title": "Celeste",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/504230/library_600x900.jpg",
+            "genres": [
+                "Plataformas",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2018-01-25",
+            "developer": "Maddy Makes Games",
+            "publisher": "Maddy Makes Games",
+            "description": "Ayuda a Madeline a sobrevivir a sus demonios internos en su viaje a la cima de la montaña Celeste.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "resident-evil-4-remake",
+            "title": "Resident Evil 4",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2050650/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2023-03-24",
+            "developer": "CAPCOM Co., Ltd.",
+            "publisher": "CAPCOM Co., Ltd.",
+            "description": "Leon S. Kennedy viaja a un remoto pueblo europeo para rescatar a la hija del presidente de los Estados Unidos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "monster-hunter-world",
+            "title": "Monster Hunter: World",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/582010/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2018-08-09",
+            "developer": "CAPCOM Co., Ltd.",
+            "publisher": "CAPCOM Co., Ltd.",
+            "description": "Caza feroces criaturas gigantescas en un ecosistema vivo repleto de peligros y recursos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "half-life-2",
+            "title": "Half-Life 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/220/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2004-11-16",
+            "developer": "Valve",
+            "publisher": "Valve",
+            "description": "Toma la palanca del científico Gordon Freeman en una Tierra devastada y dominada por los alienígenas Combine.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dark-souls-3",
+            "title": "Dark Souls III",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/374320/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Soulslike",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2016-04-11",
+            "developer": "FromSoftware",
+            "publisher": "Bandai Namco Entertainment",
+            "description": "Viaja al reino de Lothric al borde del apocalipsis para devolver a los Señores de la Ceniza a sus tronos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "sea-of-thieves",
+            "title": "Sea of Thieves",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1172620/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-06-03",
+            "developer": "Rare Ltd",
+            "publisher": "Xbox Game Studios",
+            "description": "Vive la vida pirata definitiva navegando, explorando islas misteriosas y buscando tesoros legendarios.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "the-legend-of-zelda-botw",
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/250900/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "RPG",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "Nintendo Switch",
+                "Wii U"
+            ],
+            "releaseDate": "2017-03-03",
+            "developer": "Nintendo EPD",
+            "publisher": "Nintendo",
+            "description": "Despierta tras cien años de letargo y explora libremente el vasto reino de Hyrule para derrotar a Ganon.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "skyrim-special-edition",
+            "title": "The Elder Scrolls V: Skyrim Special Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/489830/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Mundo abierto",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2016-10-28",
+            "developer": "Bethesda Game Studios",
+            "publisher": "Bethesda Softworks",
+            "description": "Vive una vida virtual en el épico reino nórdico de Skyrim como el legendario Sangre de Dragón.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "fallout-4",
+            "title": "Fallout 4",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/377160/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2015-11-10",
+            "developer": "Bethesda Game Studios",
+            "publisher": "Bethesda Softworks",
+            "description": "Sobrevive en un yermo postnuclear retrofuturista mientras buscas a tu hijo en Boston.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "fallout-new-vegas",
+            "title": "Fallout: New Vegas",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/22380/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2010-10-19",
+            "developer": "Obsidian Entertainment",
+            "publisher": "Bethesda Softworks",
+            "description": "Un mensajero dado por muerto busca venganza en el implacable desierto de Mojave y New Vegas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dark-souls-remastered",
+            "title": "Dark Souls: Remastered",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/570940/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Soulslike",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2018-05-24",
+            "developer": "QLOC / FromSoftware",
+            "publisher": "Bandai Namco Entertainment",
+            "description": "Reaviva la llama en el reino de Lordran en el título que definió el género soulslike.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dark-souls-2",
+            "title": "Dark Souls II: Scholar of the First Sin",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/335300/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Soulslike",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2015-04-01",
+            "developer": "FromSoftware",
+            "publisher": "Bandai Namco Entertainment",
+            "description": "Viaja por el reino marchito de Drangleic buscando una cura para la maldición de los no muertos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "lies-of-p",
+            "title": "Lies of P",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1627720/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Soulslike",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2023-09-19",
+            "developer": "Round8 Studio",
+            "publisher": "NEOWIZ",
+            "description": "Una oscura reinterpretación del cuento de Pinocho en la decadente ciudad de Krat durante la Belle Époque.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "final-fantasy-vii-remake",
+            "title": "Final Fantasy VII Remake Intergrade",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1462040/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2022-06-17",
+            "developer": "Square Enix",
+            "publisher": "Square Enix",
+            "description": "Cloud Strife se une al grupo ecoterrorista Avalanche para luchar contra la corporación Shinra en Midgar.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "final-fantasy-xv",
+            "title": "Final Fantasy XV Windows Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/637650/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2018-03-06",
+            "developer": "Square Enix",
+            "publisher": "Square Enix",
+            "description": "Únete al príncipe Noctis y sus tres mejores amigos en un viaje por carretera para reclamar su trono.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "persona-5-royal",
+            "title": "Persona 5 Royal",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1687950/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Aventura",
+                "Estrategia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2022-10-21",
+            "developer": "ATLUS",
+            "publisher": "SEGA",
+            "description": "Ponte la máscara de Joker y roba los corazones corruptos de los adultos en Tokio como los Phantom Thieves.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "persona-4-golden",
+            "title": "Persona 4 Golden",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1113000/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-06-13",
+            "developer": "ATLUS",
+            "publisher": "SEGA",
+            "description": "Investiga una misteriosa serie de asesinatos en el apacible pueblo rural de Inaba.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "persona-3-reload",
+            "title": "Persona 3 Reload",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2161700/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2024-02-02",
+            "developer": "ATLUS",
+            "publisher": "SEGA",
+            "description": "Explora la misteriosa Hora Oscura y escala la torre Tártaro en esta aclamada recreación moderna.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "nier-automata",
+            "title": "NieR:Automata",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/524220/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2017-03-17",
+            "developer": "Square Enix / PlatinumGames",
+            "publisher": "Square Enix",
+            "description": "Los androides 2B, 9S y A2 luchan en una guerra sin fin para recuperar la Tierra de un ejército de máquinas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dragons-dogma-2",
+            "title": "Dragon's Dogma 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2054970/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2024-03-22",
+            "developer": "CAPCOM Co., Ltd.",
+            "publisher": "CAPCOM Co., Ltd.",
+            "description": "Conviértete en el Arisen y embárcate en un profundo viaje junto a tus peones en un vibrante mundo de fantasía.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "monster-hunter-rise",
+            "title": "Monster Hunter Rise",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1446780/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2022-01-12",
+            "developer": "CAPCOM Co., Ltd.",
+            "publisher": "CAPCOM Co., Ltd.",
+            "description": "Domina el cordóptero y caza impresionantes monstruos inspirados en el folclore japonés en la aldea Kamura.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "mass-effect-legendary-edition",
+            "title": "Mass Effect Legendary Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1328670/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Shooter",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2021-05-14",
+            "developer": "BioWare",
+            "publisher": "Electronic Arts",
+            "description": "Comanda la tripulación de la Normandía como Shepard en la trilogía espacial definitiva.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "divinity-original-sin-2",
+            "title": "Divinity: Original Sin 2 - Definitive Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/435150/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Estrategia",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2017-09-14",
+            "developer": "Larian Studios",
+            "publisher": "Larian Studios",
+            "description": "Recluta a tus compañeros y lucha por ascender a la divinidad en un RPG táctico con libertad sin igual.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "yakuza-like-a-dragon",
+            "title": "Yakuza: Like a Dragon",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1235140/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-11-10",
+            "developer": "Ryu Ga Gotoku Studio",
+            "publisher": "SEGA",
+            "description": "Ichiban Kasuga resurge de la traición y lucha por las calles de Yokohama con un sistema de combate por turnos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "starfield",
+            "title": "Starfield",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1716740/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Ciencia ficción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2023-09-06",
+            "developer": "Bethesda Game Studios",
+            "publisher": "Bethesda Softworks",
+            "description": "Explora más de 1000 planetas y descubre artefactos alienígenas con la organización Constelación.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "hogwarts-legacy",
+            "title": "Hogwarts Legacy",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/990080/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Aventura",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2023-02-10",
+            "developer": "Avalanche Software",
+            "publisher": "Warner Bros. Games",
+            "description": "Experimenta la vida de un estudiante de quinto año en el Hogwarts del siglo XIX y domina la magia antigua.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "kingdom-come-deliverance",
+            "title": "Kingdom Come: Deliverance",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/379430/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Mundo abierto",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2018-02-13",
+            "developer": "Warhorse Studios",
+            "publisher": "Deep Silver",
+            "description": "Un RPG histórico e hiperrealista ambientado en la Bohemia medieval del siglo XV durante una guerra civil.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "disco-elysium",
+            "title": "Disco Elysium - The Final Cut",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/632470/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2019-10-15",
+            "developer": "ZA/UM",
+            "publisher": "ZA/UM",
+            "description": "Un detective con amnesia resuelve un brutal crimen en el distrito costero de Revachol.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "diablo-4",
+            "title": "Diablo IV",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2344520/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2023-06-05",
+            "developer": "Blizzard Entertainment",
+            "publisher": "Blizzard Entertainment",
+            "description": "Lucha contra las fuerzas de Lilith a través de los sombríos y despiadados parajes de Santuario.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "spiderman-remastered",
+            "title": "Marvel's Spider-Man Remastered",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1817070/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2022-08-12",
+            "developer": "Insomniac Games / Nixxes",
+            "publisher": "PlayStation PC LLC",
+            "description": "Balancéate por las calles de Nueva York y combate a villanos icónicos como un Peter Parker experimentado.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "spiderman-miles-morales",
+            "title": "Marvel's Spider-Man: Miles Morales",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1817190/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2022-11-18",
+            "developer": "Insomniac Games / Nixxes",
+            "publisher": "PlayStation PC LLC",
+            "description": "Domina poderes bioeléctricos de veneno y defiende Harlem como el nuevo Spider-Man de la ciudad.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "horizon-zero-dawn",
+            "title": "Horizon Zero Dawn Complete Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1151640/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "RPG",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2020-08-07",
+            "developer": "Guerrilla",
+            "publisher": "PlayStation PC LLC",
+            "description": "Acompaña a Aloy en un exuberante futuro postapocalíptico dominado por letales máquinas animadas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "horizon-forbidden-west",
+            "title": "Horizon Forbidden West Complete Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2420110/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "RPG",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2024-03-21",
+            "developer": "Guerrilla / Nixxes",
+            "publisher": "PlayStation PC LLC",
+            "description": "Explora tierras lejanas, enfréntate a máquinas colosales y salva la biosfera en el misterioso Oeste Prohibido.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ghost-of-tsushima",
+            "title": "Ghost of Tsushima DIRECTOR'S CUT",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2215430/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2024-05-16",
+            "developer": "Sucker Punch / Nixxes",
+            "publisher": "PlayStation PC LLC",
+            "description": "Jin Sakai debe renunciar al código samurái tradicional para convertirse en el Fantasma y liberar Tsushima.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "uncharted-legacy-of-thieves",
+            "title": "UNCHARTED: Colección Legado de los Ladrones",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1659420/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2022-10-19",
+            "developer": "Naughty Dog / Iron Galaxy",
+            "publisher": "PlayStation PC LLC",
+            "description": "Nathan Drake y Chloe Frazer viajan por el mundo en busca de tesoros piratas legendarios.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "the-last-of-us-part-1",
+            "title": "The Last of Us Part I",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1888930/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2023-03-28",
+            "developer": "Naughty Dog / Iron Galaxy",
+            "publisher": "PlayStation PC LLC",
+            "description": "Joel y Ellie cruzan unos Estados Unidos devastados por un hongo mortal en una odisea inolvidable.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "death-stranding",
+            "title": "Death Stranding Director's Cut",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1850570/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2022-03-30",
+            "developer": "KOJIMA PRODUCTIONS",
+            "publisher": "505 Games",
+            "description": "Sam Bridges recorre una América aislada reconectando los vestigios de la civilización.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ac-odyssey",
+            "title": "Assassin's Creed Odyssey",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/812140/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2018-10-05",
+            "developer": "Ubisoft Quebec",
+            "publisher": "Ubisoft",
+            "description": "Forja tu destino de mercenario espartano a héroe legendario en la Antigua Grecia durante la Guerra del Peloponeso.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ac-valhalla",
+            "title": "Assassin's Creed Valhalla",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2208920/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2022-12-06",
+            "developer": "Ubisoft Montreal",
+            "publisher": "Ubisoft",
+            "description": "Ponte en la piel de Eivor y lidera a tu clan vikingo hacia las ricas costas de la Inglaterra medieval.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ac-origins",
+            "title": "Assassin's Creed Origins",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/582160/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Acción",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2017-10-27",
+            "developer": "Ubisoft Montreal",
+            "publisher": "Ubisoft",
+            "description": "Descubre el origen de la Hermandad de los Asesinos en el enigmático Antiguo Egipto con Bayek de Siwa.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "batman-arkham-knight",
+            "title": "Batman: Arkham Knight",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/208650/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Mundo abierto"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2015-06-23",
+            "developer": "Rocksteady Studios",
+            "publisher": "Warner Bros. Games",
+            "description": "El Caballero Oscuro patrulla las calles de Gotham y pilota el Batmóvil para enfrentar la amenaza del Espantapájaros.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "batman-arkham-city",
+            "title": "Batman: Arkham City - Game of the Year Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/200260/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2012-09-07",
+            "developer": "Rocksteady Studios",
+            "publisher": "Warner Bros. Games",
+            "description": "Sobrevive dentro de una prisión gigantesca de máxima seguridad erigida en el corazón de Gotham.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "tomb-raider-2013",
+            "title": "Tomb Raider",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/203160/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2013-03-05",
+            "developer": "Crystal Dynamics",
+            "publisher": "Square Enix",
+            "description": "La primera gran expedición de Lara Croft la atrapa en una misteriosa isla habitada por una secta letal.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "rise-of-the-tomb-raider",
+            "title": "Rise of the Tomb Raider",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/391220/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2016-01-28",
+            "developer": "Crystal Dynamics",
+            "publisher": "Square Enix",
+            "description": "Lara explora la gélida Siberia en busca del secreto de la inmortalidad en la ciudad perdida de Kitezh.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "shadow-of-the-tomb-raider",
+            "title": "Shadow of the Tomb Raider: Definitive Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/750920/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2018-09-14",
+            "developer": "Eidos-Montréal",
+            "publisher": "Square Enix",
+            "description": "Lara Croft lucha a través de la densa jungla sudamericana para evitar un inminente apocalipsis maya.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "star-wars-jedi-fallen-order",
+            "title": "STAR WARS Jedi: Fallen Order",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1172380/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Soulslike"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2019-11-15",
+            "developer": "Respawn Entertainment",
+            "publisher": "Electronic Arts",
+            "description": "Cal Kestis, un joven padawan sobreviviente a la Orden 66, huye de los Inquisidores del Imperio.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "star-wars-jedi-survivor",
+            "title": "STAR WARS Jedi: Survivor",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1774580/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Soulslike"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2023-04-28",
+            "developer": "Respawn Entertainment",
+            "publisher": "Electronic Arts",
+            "description": "Cinco años después, Cal debe permanecer un paso por delante de la constante persecución del Imperio.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "control-ultimate-edition",
+            "title": "Control Ultimate Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/870780/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-08-27",
+            "developer": "Remedy Entertainment",
+            "publisher": "505 Games",
+            "description": "Jesse Faden explora la misteriosa Agencia Federal de Control utilizando asombrosos poderes telequinéticos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "alan-wake",
+            "title": "Alan Wake",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/108710/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Terror",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2012-02-16",
+            "developer": "Remedy Entertainment",
+            "publisher": "Remedy Entertainment",
+            "description": "Un escritor busca a su esposa desaparecida en el pueblo de Bright Falls combatiendo una oscuridad viviente.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "mgsv-the-phantom-pain",
+            "title": "Metal Gear Solid V: The Phantom Pain",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/287700/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Mundo abierto",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2015-09-01",
+            "developer": "Konami Digital Entertainment",
+            "publisher": "Konami",
+            "description": "Big Boss despierta tras un coma de nueve años y funda la compañía mercenaria Diamond Dogs en Afganistán.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "hitman-world-of-assassination",
+            "title": "HITMAN World of Assassination",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1659040/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Estrategia",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2022-01-20",
+            "developer": "IO Interactive A/S",
+            "publisher": "IO Interactive A/S",
+            "description": "Conviértete en el Agente 47 y ejecuta asesinatos con total libertad creativa alrededor del mundo.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dishonored-definitive-edition",
+            "title": "Dishonored - Definitive Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/205100/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2012-10-12",
+            "developer": "Arkane Studios",
+            "publisher": "Bethesda Softworks",
+            "description": "Corvo Attano busca limpiar su nombre tras ser acusado injustamente del asesinato de la emperatriz de Dunwall.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dishonored-2",
+            "title": "Dishonored 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/403640/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2016-11-11",
+            "developer": "Arkane Studios",
+            "publisher": "Bethesda Softworks",
+            "description": "Recupera el trono imperial como Emily Kaldwin o Corvo Attano en la costera y corrupta Karnaca.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "bioshock-infinite",
+            "title": "BioShock Infinite",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/8870/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2013-03-25",
+            "developer": "Irrational Games",
+            "publisher": "2K",
+            "description": "Booker DeWitt viaja a la ciudad flotante de Columbia para rescatar a Elizabeth y saldar sus deudas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "bioshock-remastered",
+            "title": "BioShock Remastered",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/409710/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2016-09-15",
+            "developer": "Blind Squirrel / 2K",
+            "publisher": "2K",
+            "description": "Descubre la decadente utopía submarina de Rapture y sobrevive a los Big Daddies y Splicers.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "doom-2016",
+            "title": "DOOM (2016)",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/379720/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2016-05-13",
+            "developer": "id Software",
+            "publisher": "Bethesda Softworks",
+            "description": "El implacable Doom Slayer despierta en Marte para erradicar una catastrófica invasión infernal.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "counter-strike-2",
+            "title": "Counter-Strike 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/730/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2023-09-27",
+            "developer": "Valve",
+            "publisher": "Valve",
+            "description": "El referente histórico de los shooters tácticos competitivos en primera persona.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "apex-legends",
+            "title": "Apex Legends",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-11-04",
+            "developer": "Respawn Entertainment",
+            "publisher": "Electronic Arts",
+            "description": "Un frenético battle royale en equipos donde leyendas con habilidades únicas compiten por la gloria.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "titanfall-2",
+            "title": "Titanfall 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1237970/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-06-18",
+            "developer": "Respawn Entertainment",
+            "publisher": "Electronic Arts",
+            "description": "La conmovedora historia de un fusilero de la Milicia y un veterano titán clase Vanguard llamado BT-7274.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "left-4-dead-2",
+            "title": "Left 4 Dead 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/550/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2009-11-17",
+            "developer": "Valve",
+            "publisher": "Valve",
+            "description": "Cuatro supervivientes deben abrirse paso disparando a hordas de zombis en el sur de Estados Unidos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "team-fortress-2",
+            "title": "Team Fortress 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/440/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2007-10-10",
+            "developer": "Valve",
+            "publisher": "Valve",
+            "description": "El legendario shooter multijugador por clases con un estilo visual carismático y partidas frenéticas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "borderlands-2",
+            "title": "Borderlands 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/49520/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "RPG",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2012-09-20",
+            "developer": "Gearbox Software",
+            "publisher": "2K",
+            "description": "Cuatro nuevos cazadores de la Cámara buscan liberar Pandora de la tiranía del infame Jack el Guapo.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "borderlands-3",
+            "title": "Borderlands 3",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/397540/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "RPG",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-03-13",
+            "developer": "Gearbox Software",
+            "publisher": "2K",
+            "description": "Viaja por múltiples planetas y dispara billones de armas extravagantes para detener a los siameses Calypso.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "deep-rock-galactic",
+            "title": "Deep Rock Galactic",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/548430/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-05-13",
+            "developer": "Ghost Ship Games",
+            "publisher": "Coffee Stain Publishing",
+            "description": "Enanos mineros espaciales excavan cuevas alienígenas 100% destructibles repletas de bichos hostiles.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "payday-2",
+            "title": "PAYDAY 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/218620/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2013-08-13",
+            "developer": "OVERKILL - a Starbreeze Studio.",
+            "publisher": "Starbreeze Publishing AB",
+            "description": "Ponte la máscara junto a tu banda y ejecuta audaces atracos bancarios en Washington D.C.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "rainbow-six-siege",
+            "title": "Tom Clancy's Rainbow Six Siege",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/359550/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2015-12-01",
+            "developer": "Ubisoft Montreal",
+            "publisher": "Ubisoft",
+            "description": "Shooter táctico en primera persona donde la destrucción del entorno y la coordinación son clave.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "metro-exodus",
+            "title": "Metro Exodus",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/412020/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2019-02-15",
+            "developer": "4A Games",
+            "publisher": "Deep Silver",
+            "description": "Artyom lidera un grupo de exploradores a bordo del tren Aurora en busca de una nueva vida al este de Rusia.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "metro-2033-redux",
+            "title": "Metro 2033 Redux",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/286690/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Terror",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2014-08-28",
+            "developer": "4A Games",
+            "publisher": "Deep Silver",
+            "description": "Sobrevive en los túneles del metro de Moscú tras un holocausto nuclear combatiendo mutantes letales.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "wolfenstein-new-order",
+            "title": "Wolfenstein: The New Order",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/350080/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2014-05-20",
+            "developer": "MachineGames",
+            "publisher": "Bethesda Softworks",
+            "description": "B.J. Blazkowicz encabeza la resistencia contra el régimen que conquistó el mundo en una historia alternativa.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "halo-mcc",
+            "title": "Halo: The Master Chief Collection",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/976730/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2019-12-03",
+            "developer": "343 Industries / Bungie",
+            "publisher": "Xbox Game Studios",
+            "description": "Las seis campañas legendarias del Jefe Maestro reunidas en una colección cinematográfica y multijugador.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "halo-infinite",
+            "title": "Halo Infinite",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1240440/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2021-11-15",
+            "developer": "343 Industries",
+            "publisher": "Xbox Game Studios",
+            "description": "El Jefe Maestro regresa al anillo Zeta Halo para enfrentarse a la feroz amenaza de los Desterrados.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "destiny-2",
+            "title": "Destiny 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1085660/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "RPG",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2019-10-01",
+            "developer": "Bungie",
+            "publisher": "Bungie",
+            "description": "Conviértete en un Guardián, defiende la Última Ciudad y explora los misterios del sistema solar.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "helldivers-2",
+            "title": "HELLDIVERS 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/553850/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2024-02-08",
+            "developer": "Arrowhead Game Studios",
+            "publisher": "PlayStation PC LLC",
+            "description": "Únete a los Helldivers y lucha por la libertad y la Democracia Tutelada en una galaxia hostil.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "space-marine-2",
+            "title": "Warhammer 40,000: Space Marine 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2183900/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2024-09-09",
+            "developer": "Saber Interactive",
+            "publisher": "Focus Entertainment",
+            "description": "Encarna al teniente Titus de los Ultramarines y purga implacables enjambres Tiránidos por el Emperador.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ultrakill",
+            "title": "ULTRAKILL",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1229490/library_600x900.jpg",
+            "genres": [
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2020-09-03",
+            "developer": "Arsi \"Hakita\" Patala",
+            "publisher": "New Blood Interactive",
+            "description": "La humanidad ha muerto. La sangre es combustible. El infierno está lleno. Un frenético boomer shooter ultrarrápido.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dead-cells",
+            "title": "Dead Cells",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/588650/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Plataformas",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2018-08-07",
+            "developer": "Motion Twin",
+            "publisher": "Motion Twin",
+            "description": "Un rogue-lite de acción frenética tipo metroidvania en un castillo cambiante y despiadado.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "slay-the-spire",
+            "title": "Slay the Spire",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/646570/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Estrategia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2019-01-23",
+            "developer": "Mega Crit Games",
+            "publisher": "Humble Games",
+            "description": "Combina construcción de mazos de cartas y mecánicas roguelike para ascender y derrotar a la Aguja.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "balatro",
+            "title": "Balatro",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2379780/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Estrategia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2024-02-20",
+            "developer": "LocalThunk",
+            "publisher": "Playstack",
+            "description": "Un hipnótico roguelike de cartas basado en el póker con comodines que desencadenan combos infinitos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "binding-of-isaac-rebirth",
+            "title": "The Binding of Isaac: Rebirth",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/250900/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2014-11-04",
+            "developer": "Nicalis, Inc. / Edmund McMillen",
+            "publisher": "Nicalis, Inc.",
+            "description": "Ayuda al pequeño Isaac a escapar del sótano infestado de pesadillas en este clásico shooter roguelike.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "risk-of-rain-2",
+            "title": "Risk of Rain 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/632360/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-08-11",
+            "developer": "Hopoo Games",
+            "publisher": "Gearbox Publishing",
+            "description": "Escapa de un caótico planeta alienígena mientras la dificultad aumenta con cada segundo que pasa.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "enter-the-gungeon",
+            "title": "Enter the Gungeon",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/311690/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Shooter",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2016-04-05",
+            "developer": "Dodge Roll",
+            "publisher": "Devolver Digital",
+            "description": "Desciende por la Armazmorra disparando y rodando para encontrar el arma definitiva que puede matar el pasado.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "vampire-survivors",
+            "title": "Vampire Survivors",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1794680/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2022-10-20",
+            "developer": "poncle",
+            "publisher": "poncle",
+            "description": "Sobrevive a mareas de miles de monstruos y evoluciona tus hechizos en sesiones adictivas de 30 minutos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "noita",
+            "title": "Noita",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/881100/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Acción",
+                "Sandbox"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2020-10-15",
+            "developer": "Nolla Games",
+            "publisher": "Nolla Games",
+            "description": "Un roguelite mágico donde cada píxel del mundo está físicamente simulado y reacciona químicamente.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "rogue-legacy-2",
+            "title": "Rogue Legacy 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1253920/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Plataformas",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2022-04-28",
+            "developer": "Cellar Door Games",
+            "publisher": "Cellar Door Games",
+            "description": "Cada vez que mueres, tus descendientes heredan tu castillo, tu oro y sus peculiares rasgos genéticos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ftl-faster-than-light",
+            "title": "FTL: Faster Than Light",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/212680/library_600x900.jpg",
+            "genres": [
+                "Roguelike",
+                "Estrategia",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "Móvil"
+            ],
+            "releaseDate": "2012-09-14",
+            "developer": "Subset Games",
+            "publisher": "Subset Games",
+            "description": "Dirige a la tripulación de una nave espacial en una tensa carrera a través de sectores galácticos hostiles.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "into-the-breach",
+            "title": "Into the Breach",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/597210/library_600x900.jpg",
+            "genres": [
+                "Estrategia",
+                "Roguelike"
+            ],
+            "platforms": [
+                "PC",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2018-02-27",
+            "developer": "Subset Games",
+            "publisher": "Subset Games",
+            "description": "Controla poderosos mechas del futuro para repeler una invasión alienígena en batallas tácticas en cuadrícula.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ori-and-the-blind-forest",
+            "title": "Ori and the Blind Forest: Definitive Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/387290/library_600x900.jpg",
+            "genres": [
+                "Plataformas",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2016-04-27",
+            "developer": "Moon Studios GmbH",
+            "publisher": "Xbox Game Studios",
+            "description": "Un cuento visualmente asombroso sobre un joven huérfano destinado a salvar el moribundo bosque de Nibel.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "ori-and-the-will-of-the-wisps",
+            "title": "Ori and the Will of the Wisps",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1057090/library_600x900.jpg",
+            "genres": [
+                "Plataformas",
+                "Acción",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-03-11",
+            "developer": "Moon Studios GmbH",
+            "publisher": "Xbox Game Studios",
+            "description": "Embárcate en un épico viaje por un vasto mundo lleno de nuevos amigos y enemigos para desentrañar el destino de Ori.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "blasphemous",
+            "title": "Blasphemous",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/774361/library_600x900.jpg",
+            "genres": [
+                "Soulslike",
+                "Acción",
+                "Plataformas"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2019-09-10",
+            "developer": "The Game Kitchen",
+            "publisher": "Team17",
+            "description": "El Penitente debe purgar la tierra de Cvstodia en este metroidvania oscuro inspirado en el folclore sevillano.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "blasphemous-2",
+            "title": "Blasphemous 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2114740/library_600x900.jpg",
+            "genres": [
+                "Soulslike",
+                "Acción",
+                "Plataformas"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2023-08-24",
+            "developer": "The Game Kitchen",
+            "publisher": "Team17",
+            "description": "Despierta de nuevo para enfrentar el regreso del Milagro en una tierra desconocida con nuevas armas sagradas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "cuphead",
+            "title": "Cuphead",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/268910/library_600x900.jpg",
+            "genres": [
+                "Plataformas",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2017-09-29",
+            "developer": "Studio MDHR Entertainment Inc.",
+            "publisher": "Studio MDHR Entertainment Inc.",
+            "description": "Juego de acción y disparos centrado en batallas de jefes con animación clásica dibujada a mano al estilo de los años 30.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "shovel-knight",
+            "title": "Shovel Knight: Treasure Trove",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/250760/library_600x900.jpg",
+            "genres": [
+                "Plataformas",
+                "Aventura",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2014-06-26",
+            "developer": "Yacht Club Games",
+            "publisher": "Yacht Club Games",
+            "description": "El caballero de la pala salta, excava y combate en un tributo maestro a la era dorada de los 8 bits.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "katana-zero",
+            "title": "Katana ZERO",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/460950/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Plataformas"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2019-04-18",
+            "developer": "Askiisoft",
+            "publisher": "Devolver Digital",
+            "description": "Un samurái con poderes de manipulación temporal ejecuta letales contratos en una metrópolis cyberpunk neón.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "hotline-miami",
+            "title": "Hotline Miami",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/219150/library_600x900.jpg",
+            "genres": [
+                "Acción",
+                "Shooter"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2012-10-23",
+            "developer": "Dennaton Games",
+            "publisher": "Devolver Digital",
+            "description": "Un sangriento shooter cenital ambientado en el Miami de 1989 con una banda sonora synthwave legendaria.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "undertale",
+            "title": "Undertale",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/391540/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2015-09-15",
+            "developer": "tobyfox",
+            "publisher": "tobyfox",
+            "description": "El aclamado RPG indie donde no tienes que matar a nadie para triunfar y hacer amigos en el subsuelo.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "outer-wilds",
+            "title": "Outer Wilds",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/753640/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2020-06-18",
+            "developer": "Mobius Digital",
+            "publisher": "Annapurna Interactive",
+            "description": "Pilota una nave espacial artesanal y desentraña los misterios de un sistema solar atrapado en un bucle temporal de 22 minutos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "return-of-the-obra-dinn",
+            "title": "Return of the Obra Dinn",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/653530/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Estrategia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2018-10-18",
+            "developer": "Lucas Pope",
+            "publisher": "3909",
+            "description": "Un inspector de seguros averigua la causa de muerte de 60 tripulantes con un reloj de bolsillo que revive los últimos segundos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "tunic",
+            "title": "TUNIC",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/553420/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Acción",
+                "Soulslike"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2022-03-16",
+            "developer": "TUNIC Team",
+            "publisher": "Finji",
+            "description": "Un pequeño zorro emprende una gran aventura explorando una tierra repleta de leyendas perdidas y secretos crípticos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dave-the-diver",
+            "title": "DAVE THE DIVER",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1868140/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Simulación",
+                "RPG"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2023-06-28",
+            "developer": "MINTROCKET",
+            "publisher": "MINTROCKET",
+            "description": "Explora las profundidades marinas de la Fosa Azul de día y gestiona un popular restaurante de sushi de noche.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dredge",
+            "title": "DREDGE",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1562420/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Terror",
+                "Simulación"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2023-03-30",
+            "developer": "Black Salt Games",
+            "publisher": "Team17",
+            "description": "Pilota tu pesquero para explorar islas remotas y dragar el fondo del mar mientras evitas horrores eldritch nocturnos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "animal-well",
+            "title": "ANIMAL WELL",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/813230/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Plataformas"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2024-05-09",
+            "developer": "Shared Memory",
+            "publisher": "Bigmode",
+            "description": "Explora un denso e interconectado laberinto y desvela sus incontables secretos en este hipnótico metroidvania.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "sea-of-stars",
+            "title": "Sea of Stars",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1244090/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2023-08-28",
+            "developer": "Sabotage Studio",
+            "publisher": "Sabotage Studio",
+            "description": "Un tributo a los RPG clásicos por turnos con combates dinámicos, navegación fluida y banda sonora de ensueño.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "gris",
+            "title": "GRIS",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/683320/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Plataformas"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2018-12-13",
+            "developer": "Nomada Studio",
+            "publisher": "Devolver Digital",
+            "description": "Una experiencia serena y evocadora sobre una joven que lidia con el dolor a través de un mundo acuarela en constante cambio.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "inside",
+            "title": "INSIDE",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/304430/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Plataformas",
+                "Terror"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2016-07-07",
+            "developer": "Playdead",
+            "publisher": "Playdead",
+            "description": "Un niño solitario y perseguido se ve arrastrado hacia el corazón de un oscuro proyecto experimental.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "limbo",
+            "title": "LIMBO",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/48000/library_600x900.jpg",
+            "genres": [
+                "Aventura",
+                "Plataformas",
+                "Terror"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2011-08-02",
+            "developer": "Playdead",
+            "publisher": "Playdead",
+            "description": "Incierto sobre el destino de su hermana, un niño entra en el tétrico y monocromático mundo de Limbo.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "little-nightmares",
+            "title": "Little Nightmares",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/424840/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Aventura",
+                "Plataformas"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2017-04-28",
+            "developer": "Tarsier Studios",
+            "publisher": "Bandai Namco Entertainment",
+            "description": "Ayuda a Six a escapar de Las Fauces, un misterioso navío submarino habitado por almas corrompidas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "little-nightmares-2",
+            "title": "Little Nightmares II",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/860510/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Aventura",
+                "Plataformas"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2021-02-11",
+            "developer": "Tarsier Studios",
+            "publisher": "Bandai Namco Entertainment",
+            "description": "Acompaña a Mono y Six a través de la inquietante Ciudad Pálida distorsionada por una Torre de Transmisión.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "subnautica",
+            "title": "Subnautica",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/264710/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Aventura",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2018-01-23",
+            "developer": "Unknown Worlds Entertainment",
+            "publisher": "Unknown Worlds Entertainment",
+            "description": "Desciende a las profundidades de un planeta oceánico alienígena tras estrellar tu cápsula de escape.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "subnautica-below-zero",
+            "title": "Subnautica: Below Zero",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/848450/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Aventura",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2021-05-14",
+            "developer": "Unknown Worlds Entertainment",
+            "publisher": "Unknown Worlds Entertainment",
+            "description": "Sumérgete en una gélida aventura submarina en una región ártica del planeta 4546B.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "the-forest",
+            "title": "The Forest",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/242760/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Terror",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2018-04-30",
+            "developer": "Endnight Games Ltd",
+            "publisher": "Endnight Games Ltd",
+            "description": "Único superviviente de un accidente de avión, construye refugios y defiéndete de una sociedad de caníbales.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "sons-of-the-forest",
+            "title": "Sons Of The Forest",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1326470/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Terror",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2024-02-22",
+            "developer": "Endnight Games Ltd",
+            "publisher": "Newnight",
+            "description": "Enviado a una isla remota a rescatar a un multimillonario desaparecido, te encuentras atrapado en un infierno caníbal.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "valheim",
+            "title": "Valheim",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/892970/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Sandbox",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2021-02-02",
+            "developer": "Iron Gate AB",
+            "publisher": "Coffee Stain Publishing",
+            "description": "Un brutal juego de exploración y supervivencia para 1-10 jugadores ambientado en el purgatorio vikingo.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "rust",
+            "title": "Rust",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/252490/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Acción",
+                "Sandbox"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2018-02-08",
+            "developer": "Facepunch Studios",
+            "publisher": "Facepunch Studios",
+            "description": "El único objetivo en Rust es sobrevivir. Supera el hambre, la sed y la traición de otros jugadores.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dont-starve-together",
+            "title": "Don't Starve Together",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/322330/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Aventura",
+                "Sandbox"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2016-04-21",
+            "developer": "Klei Entertainment",
+            "publisher": "Klei Entertainment",
+            "description": "Lucha, cultiva y construye junto a tus amigos en un extraño e inhóspito mundo repleto de sombras y monstruos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "project-zomboid",
+            "title": "Project Zomboid",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/108600/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "RPG",
+                "Sandbox"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2013-11-08",
+            "developer": "The Indie Stone",
+            "publisher": "The Indie Stone",
+            "description": "El simulador definitivo de supervivencia zombi. No se trata de cómo sobrevivirás, sino de cómo morirás.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "raft",
+            "title": "Raft",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/648800/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Aventura",
+                "Sandbox"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2022-06-20",
+            "developer": "Redbeet Interactive",
+            "publisher": "Axolot Games",
+            "description": "Recoge restos flotantes con tu gancho, expande tu balsa de madera y cuídate del tiburón devorador.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "grounded",
+            "title": "Grounded",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/962130/library_600x900.jpg",
+            "genres": [
+                "Supervivencia",
+                "Aventura",
+                "Sandbox"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2022-09-27",
+            "developer": "Obsidian Entertainment",
+            "publisher": "Xbox Game Studios",
+            "description": "Encogido al tamaño de una hormiga, sobrevive en el jardín trasero frente a arañas gigantes y bichos amenazantes.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "resident-evil-2-remake",
+            "title": "Resident Evil 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/883710/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Acción",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2019-01-25",
+            "developer": "CAPCOM Co., Ltd.",
+            "publisher": "CAPCOM Co., Ltd.",
+            "description": "Leon Kennedy y Claire Redfield sobreviven a la comisaría de Raccoon City bajo el constante acecho de Tyrant.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "resident-evil-7",
+            "title": "Resident Evil 7 Biohazard",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/418370/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Supervivencia",
+                "Acción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2017-01-24",
+            "developer": "CAPCOM Co., Ltd.",
+            "publisher": "CAPCOM Co., Ltd.",
+            "description": "Ethan Winters viaja a una plantación abandonada en Luisiana para rescatar a su esposa de la retorcida familia Baker.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "resident-evil-village",
+            "title": "Resident Evil Village",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1196590/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Acción",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2021-05-07",
+            "developer": "CAPCOM Co., Ltd.",
+            "publisher": "CAPCOM Co., Ltd.",
+            "description": "Ethan busca desesperadamente a su hija secuestrada en un remoto pueblo europeo dominado por cuatro jerarcas siniestros.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "dead-space-remake",
+            "title": "Dead Space",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1693980/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Shooter",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2023-01-27",
+            "developer": "Motive",
+            "publisher": "Electronic Arts",
+            "description": "El ingeniero Isaac Clarke debe desmembrar terroríficos necromorfos a bordo de la nave minera USG Ishimura.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "silent-hill-2-remake",
+            "title": "SILENT HILL 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2124490/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation"
+            ],
+            "releaseDate": "2024-10-08",
+            "developer": "Bloober Team SA",
+            "publisher": "KONAMI",
+            "description": "Tras recibir una carta de su difunta esposa, James Sunderland viaja a la niebla psicológica de Silent Hill.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "outlast",
+            "title": "Outlast",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/238320/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2013-09-04",
+            "developer": "Red Barrels",
+            "publisher": "Red Barrels",
+            "description": "El periodista Miles Upshur investiga con su videocámara los horrores del manicomio Mount Massive.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "outlast-2",
+            "title": "Outlast 2",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/414700/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2017-04-25",
+            "developer": "Red Barrels",
+            "publisher": "Red Barrels",
+            "description": "Un camarógrafo investiga el asesinato de una mujer embarazada en una remota comunidad sectaria del cañón de Arizona.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "alien-isolation",
+            "title": "Alien: Isolation",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/214490/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Supervivencia",
+                "Ciencia ficción"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2014-10-06",
+            "developer": "Creative Assembly",
+            "publisher": "SEGA",
+            "description": "Amanda Ripley intenta descubrir el destino de su madre mientras es acechada por un impredecible Xenomorfo.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "amnesia-the-dark-descent",
+            "title": "Amnesia: The Dark Descent",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/57300/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch"
+            ],
+            "releaseDate": "2010-09-08",
+            "developer": "Frictional Games",
+            "publisher": "Frictional Games",
+            "description": "Explora el sombrío castillo de Brennenburg manteniendo a raya la cordura y huyendo de la oscuridad.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "amnesia-the-bunker",
+            "title": "Amnesia: The Bunker",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1944430/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Supervivencia"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2023-06-06",
+            "developer": "Frictional Games",
+            "publisher": "Frictional Games",
+            "description": "Un soldado francés de la Primera Guerra Mundial debe escapar de un búnker subterráneo con una bestia sedienta de sangre.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "phasmophobia",
+            "title": "Phasmophobia",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/739630/library_600x900.jpg",
+            "genres": [
+                "Terror",
+                "Aventura"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-09-18",
+            "developer": "Kinetic Games",
+            "publisher": "Kinetic Games",
+            "description": "Identifica entidades paranormales en casas encantadas con tus amigos usando equipamiento de cazafantasmas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "civilization-6",
+            "title": "Sid Meier's Civilization VI",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/289070/library_600x900.jpg",
+            "genres": [
+                "Estrategia",
+                "Simulación"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox",
+                "Nintendo Switch",
+                "Móvil"
+            ],
+            "releaseDate": "2016-10-21",
+            "developer": "Firaxis Games",
+            "publisher": "2K",
+            "description": "Guía a tu civilización desde la Edad de Piedra hasta la Era de la Información compitiendo con líderes históricos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "age-of-empires-2-de",
+            "title": "Age of Empires II: Definitive Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/813780/library_600x900.jpg",
+            "genres": [
+                "Estrategia"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2019-11-14",
+            "developer": "Forgotten Empires / Tantalus",
+            "publisher": "Xbox Game Studios",
+            "description": "El clásico imperecedero de estrategia en tiempo real con más de 35 civilizaciones y campañas legendarias.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "age-of-empires-4",
+            "title": "Age of Empires IV: Anniversary Edition",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1466860/library_600x900.jpg",
+            "genres": [
+                "Estrategia"
+            ],
+            "platforms": [
+                "PC",
+                "Xbox"
+            ],
+            "releaseDate": "2021-10-28",
+            "developer": "Relic Entertainment",
+            "publisher": "Xbox Game Studios",
+            "description": "Lidera imperios históricos en batallas terrestres y asedios a través de épocas formativas de la humanidad.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "stellaris",
+            "title": "Stellaris",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/281990/library_600x900.jpg",
+            "genres": [
+                "Estrategia",
+                "Ciencia ficción",
+                "Simulación"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2016-05-09",
+            "developer": "Paradox Development Studio",
+            "publisher": "Paradox Interactive",
+            "description": "Explora una vasta galaxia generada procedimentalmente, funda colonias y forja federaciones intergalácticas.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "crusader-kings-3",
+            "title": "Crusader Kings III",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1158310/library_600x900.jpg",
+            "genres": [
+                "RPG",
+                "Estrategia",
+                "Simulación"
+            ],
+            "platforms": [
+                "PC",
+                "PlayStation",
+                "Xbox"
+            ],
+            "releaseDate": "2020-09-01",
+            "developer": "Paradox Development Studio",
+            "publisher": "Paradox Interactive",
+            "description": "Lidera una dinastía medieval a través de generaciones recurriendo a la diplomacia, intrigas y matrimonios políticos.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "hearts-of-iron-4",
+            "title": "Hearts of Iron IV",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/394360/library_600x900.jpg",
+            "genres": [
+                "Estrategia",
+                "Simulación"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2016-06-06",
+            "developer": "Paradox Development Studio",
+            "publisher": "Paradox Interactive",
+            "description": "Toma el mando de cualquier nación durante la Segunda Guerra Mundial y decide el destino del conflicto global.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        },
+        {
+            "id": "total-war-warhammer-3",
+            "title": "Total War: WARHAMMER III",
+            "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1142710/library_600x900.jpg",
+            "genres": [
+                "Estrategia",
+                "Acción"
+            ],
+            "platforms": [
+                "PC"
+            ],
+            "releaseDate": "2022-02-17",
+            "developer": "CREATIVE ASSEMBLY",
+            "publisher": "SEGA",
+            "description": "Reúne tus ejércitos y adéntrate en el Reino del Caos en la culminación cataclísmica de la trilogía fantástica.",
+            "status": "backlog",
+            "favorite": false,
+            "rating": null
+        }
+    ]
+}

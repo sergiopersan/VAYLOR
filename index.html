@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101014">
+    <meta name="description" content="GameVault, tu biblioteca personal de videojuegos.">
+    <title>VAYLOR — Tu biblioteca gaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" type="module"></script>
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <a class="brand" href="#" aria-label="GameVault, inicio">
+                <img class="brand-icon" src="assets/icon.png" alt="Vaylor">
+                <span><span class="brand-accent">Vaylor</span></span>
+            </a>
+
+            <div class="side-label">MENÚ PRINCIPAL</div>
+
+            <nav class="navigation" aria-label="Navegación principal">
+                <button class="nav-link active" data-view="all">
+                    <span class="nav-icon">▦</span> Mi biblioteca
+                </button>
+                <button class="nav-link" data-view="catalog">
+                    <span class="nav-icon">🎮</span> Juegos
+                </button>
+                <button class="nav-link" data-view="playing">
+                    <span class="nav-icon">▷</span> Jugando
+                </button>
+                <button class="nav-link" data-view="completed">
+                    <span class="nav-icon">✓</span> Completados
+                </button>
+                <button class="nav-link" data-view="wishlist">
+                    <span class="nav-icon">♡</span> Lista de deseos
+                </button>
+                <button class="nav-link" data-view="favorites">
+                    <span class="nav-icon">★</span> Favoritos
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-promo">
+                    <div class="promo-symbol">✦</div>
+                    <strong>Tu colección,</strong>
+                    <strong>tu universo.</strong>
+                    <p>Todos tus juegos en un solo lugar.</p>
+                </div>
+                <div class="sidebar-footer">VAYLOR <span>v1.0</span></div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumb">
+                    <span>VAYLOR</span>
+                    <span class="muted">/</span>
+                    <strong id="breadcrumb-title">Mi biblioteca</strong>
+                </div>
+                <div class="topbar-actions">
+                    <span class="online-dot"></span>
+                    <span class="sync-label">Biblioteca local</span>
+                    <button class="avatar" title="Tu perfil" aria-label="Tu perfil"><img src="assets/icon.png" alt="Perfil"></button>
+                </div>
+            </header>
+
+            <section class="welcome">
+                <div>
+                    <div class="eyebrow"><span>✦</span> TU ESPACIO GAMING</div>
+                    <h1>Tu mundo.<br><span>Tu biblioteca.</span></h1>
+                    <p class="welcome-description">
+                        Todos tus juegos, aventuras y logros. Organizados a tu manera.
+                    </p>
+                </div>
+                <div class="welcome-art" aria-hidden="true">
+                    <div class="art-orbit orbit-one"></div>
+                    <div class="art-orbit orbit-two"></div>
+                    <img class="art-core" src="assets/icon.png" alt="Vaylor">
+                    <span class="art-star star-one">✦</span>
+                    <span class="art-star star-two">✧</span>
+                </div>
+            </section>
+
+            <section class="stats-grid" aria-label="Estadísticas de tu colección">
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Total de juegos</span>
+                        <span class="stat-icon purple">▦</span>
+                    </div>
+                    <strong id="total-games">0</strong>
+                    <p>En tu colección</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Jugando ahora</span>
+                        <span class="stat-icon green">▷</span>
+                    </div>
+                    <strong id="playing-games">0</strong>
+                    <p>En progreso</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Completados</span>
+                        <span class="stat-icon blue">✓</span>
+                    </div>
+                    <strong id="completed-games">0</strong>
+                    <p>Aventuras terminadas</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Horas jugadas</span>
+                        <span class="stat-icon orange">◷</span>
+                    </div>
+                    <strong id="total-hours">0 h</strong>
+                    <p>Tiempo invertido</p>
+                </article>
+            </section>
+
+            <section class="library-section">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">TU COLECCIÓN</div>
+                        <h2 id="section-title">Todos los juegos <span id="visible-count">0</span></h2>
+                    </div>
+                    <button class="primary-button" id="open-add">
+                        <span>＋</span> Añadir juego
+                    </button>
+                </div>
+
+                <div class="toolbar">
+                    <label class="search-box">
+                        <span aria-hidden="true">⌕</span>
+                        <input id="search-input" type="search" placeholder="Buscar videojuegos..." autocomplete="off"
+                            aria-label="Buscar videojuegos">
+                        <kbd>/</kbd>
+                    </label>
+
+                    <label class="select-wrap">
+                        <span class="sr-only">Filtrar por género</span>
+                        <select id="genre-filter">
+                            <option value="all">Todos los géneros</option>
+                            <option value="RPG">RPG</option>
+                            <option value="Acción">Acción</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Sandbox">Sandbox</option>
+                            <option value="Roguelike">Roguelike</option>
+                            <option value="Supervivencia">Supervivencia</option>
+                            <option value="Shooter">Shooter</option>
+                            <option value="Plataformas">Plataformas</option>
+                            <option value="Soulslike">Soulslike</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Simulación">Simulación</option>
+                        </select>
+                    </label>
+
+                    <label class="select-wrap">
+                        <span class="sr-only">Ordenar juegos</span>
+                        <select id="sort-filter">
+                            <option value="name">Nombre A–Z</option>
+                            <option value="rating">Mejor puntuación</option>
+                            <option value="hours">Más horas</option>
+                            <option value="recent">Añadidos recientemente</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div id="game-grid" class="game-grid" aria-live="polite"></div>
+
+                <div id="empty-state" class="empty-state" hidden>
+                    <div class="empty-icon">⌕</div>
+                    <h3>No encontramos juegos</h3>
+                    <p>Prueba otra búsqueda o añade un nuevo videojuego.</p>
+                    <button class="secondary-button" id="empty-add">Añadir un juego</button>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <span>GAMEVAULT © <span id="current-year"></span></span>
+                <span>Hecho para amantes de los videojuegos <span class="footer-heart">♥</span></span>
+            </footer>
+        </main>
+    </div>
+
+    <dialog id="game-dialog" class="game-dialog">
+        <form id="game-form">
+            <div class="dialog-header">
+                <div>
+                    <div class="eyebrow">PERSONALIZA TU COLECCIÓN</div>
+                    <h2 id="dialog-title">Añadir videojuego</h2>
+                </div>
+                <button type="button" id="close-dialog" class="icon-button" aria-label="Cerrar formulario">✕</button>
+            </div>
+
+            <input type="hidden" id="game-id">
+
+            <label class="form-field">
+                <span>Nombre del juego *</span>
+                <input id="game-name" required maxlength="80" placeholder="Ej. Elden Ring">
+            </label>
+
+            <label class="form-field">
+                <span>URL de la portada</span>
+                <input id="game-cover" type="url" maxlength="1000" placeholder="https://...">
+                <small>Opcional. Puedes utilizar una URL de imagen pública.</small>
+            </label>
+
+            <div class="form-row">
+                <label class="form-field">
+                    <span>Género</span>
+                    <select id="game-genre">
+                        <option>RPG</option>
+                        <option>Acción</option>
+                        <option>Aventura</option>
+                        <option>Sandbox</option>
+                        <option>Roguelike</option>
+                        <option>Supervivencia</option>
+                        <option>Shooter</option>
+                        <option>Estrategia</option>
+                        <option>Deportes</option>
+                        <option>Simulación</option>
+                        <option>Otro</option>
+                    </select>
+                </label>
+                <label class="form-field">
+                    <span>Plataforma</span>
+                    <select id="game-platform">
+                        <option>PC</option>
+                        <option>PlayStation 5</option>
+                        <option>PlayStation 4</option>
+                        <option>Xbox</option>
+                        <option>Nintendo Switch</option>
+                        <option>Múltiples</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label class="form-field">
+                    <span>Estado</span>
+                    <select id="game-status">
+                        <option value="backlog">Pendiente</option>
+                        <option value="playing">Jugando</option>
+                        <option value="completed">Completado</option>
+                        <option value="wishlist">Lista de deseos</option>
+                    </select>
+                </label>
+                <label class="form-field">
+                    <span>Horas jugadas</span>
+                    <input id="game-hours" type="number" min="0" max="100000" step="1" value="0">
+                </label>
+            </div>
+
+            <label class="form-field">
+                <span>Tu puntuación (0–10)</span>
+                <input id="game-rating" type="number" min="0" max="10" step="0.5" value="8">
+            </label>
+
+            <div class="dialog-actions">
+                <button type="button" id="cancel-dialog" class="secondary-button">
+                    Cancelar
+                </button>
+                <button type="submit" class="primary-button">
+                    Guardar juego
+                </button>
+            </div>
+        </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

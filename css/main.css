@@ -1,0 +1,9 @@
+/* ==========================================================================
+   GAMEVAULT — Hoja de estilos principal
+   Organizada de forma modular en componentes limpios y mantenibles
+   ========================================================================== */
+
+@import url("variables.css");
+@import url("layout.css");
+@import url("components.css");
+@import url("responsive.css");
