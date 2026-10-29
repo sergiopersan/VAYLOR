@@ -1,18 +1,129 @@
+/* ==========================================================================
+   VAYLOR — Design System inspirado en Apple (Human Interface Guidelines)
+   Soporte completo para Modo Claro (por defecto) y Modo Oscuro
+   ========================================================================== */
+
 :root {
+    color-scheme: light;
+
+    /* Apple Light Palette */
+    --bg: #f5f5f7;
+    --bg-translucent: rgba(245, 245, 247, 0.82);
+    --sidebar: rgba(255, 255, 255, 0.72);
+    --sidebar-border: rgba(0, 0, 0, 0.08);
+    --topbar-bg: rgba(255, 255, 255, 0.75);
+
+    --panel: #ffffff;
+    --panel-glass: rgba(255, 255, 255, 0.75);
+    --panel-hover: #ffffff;
+    --panel-secondary: #f0f0f4;
+    --panel-active: rgba(0, 113, 227, 0.08);
+
+    --border: rgba(0, 0, 0, 0.09);
+    --border-strong: rgba(0, 0, 0, 0.16);
+    --border-subtle: rgba(0, 0, 0, 0.04);
+
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #86868b;
+    --muted: #86868b;
+
+    /* Apple Accent Colors */
+    --accent: #0071e3;
+    --accent-hover: #0077ed;
+    --accent-active: #0062c4;
+    --accent-tint: rgba(0, 113, 227, 0.1);
+    --accent-text: #ffffff;
+
+    --purple: #af52de;
+    --purple-bright: #bf5af2;
+    --green: #34c759;
+    --blue: #0071e3;
+    --orange: #ff9500;
+    --red: #ff3b30;
+
+    --purple-tint: rgba(175, 82, 222, 0.12);
+    --green-tint: rgba(52, 199, 89, 0.12);
+    --blue-tint: rgba(0, 113, 227, 0.12);
+    --orange-tint: rgba(255, 149, 0, 0.12);
+    --red-tint: rgba(255, 59, 48, 0.12);
+
+    /* Typography & Radius */
+    --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Inter", sans-serif;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
+    --radius: 18px;
+    --radius-pill: 9999px;
+
+    /* Shadows & Blur */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.04);
+    --shadow-card-hover: 0 16px 36px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.03);
+
+    --backdrop-blur: blur(25px) saturate(180%);
+    --backdrop-dialog: rgba(0, 0, 0, 0.35);
+
+    /* Animation Timing */
+    --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Apple Dark Palette */
+[data-theme="dark"] {
     color-scheme: dark;
-    --bg: #101014;
-    --sidebar: #131319;
-    --panel: #191920;
-    --panel-hover: #20202a;
-    --border: #2a2a35;
-    --text: #f3f1f8;
-    --muted: #91909f;
-    --purple: #a78bfa;
-    --purple-bright: #8b5cf6;
-    --green: #65d6a4;
-    --blue: #78aaff;
-    --orange: #ffb86c;
-    --radius: 16px;
+
+    --bg: #000000;
+    --bg-translucent: rgba(12, 12, 14, 0.85);
+    --sidebar: rgba(18, 18, 20, 0.78);
+    --sidebar-border: rgba(255, 255, 255, 0.1);
+    --topbar-bg: rgba(16, 16, 18, 0.78);
+
+    --panel: #1c1c1e;
+    --panel-glass: rgba(28, 28, 30, 0.75);
+    --panel-hover: #2c2c2e;
+    --panel-secondary: #141416;
+    --panel-active: rgba(41, 151, 255, 0.16);
+
+    --border: rgba(255, 255, 255, 0.12);
+    --border-strong: rgba(255, 255, 255, 0.22);
+    --border-subtle: rgba(255, 255, 255, 0.06);
+
+    --text: #f5f5f7;
+    --text-secondary: #a1a1a6;
+    --text-tertiary: #86868b;
+    --muted: #86868b;
+
+    --accent: #2997ff;
+    --accent-hover: #40a9ff;
+    --accent-active: #0071e3;
+    --accent-tint: rgba(41, 151, 255, 0.18);
+    --accent-text: #ffffff;
+
+    --purple: #bf5af2;
+    --purple-bright: #d070ff;
+    --green: #30d158;
+    --blue: #2997ff;
+    --orange: #ff9f0a;
+    --red: #ff453a;
+
+    --purple-tint: rgba(191, 90, 242, 0.18);
+    --green-tint: rgba(48, 209, 88, 0.18);
+    --blue-tint: rgba(41, 151, 255, 0.18);
+    --orange-tint: rgba(255, 159, 10, 0.18);
+    --red-tint: rgba(255, 69, 58, 0.18);
+
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.55);
+    --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.75);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --shadow-card-hover: 0 16px 42px rgba(0, 0, 0, 0.7), 0 0 20px rgba(41, 151, 255, 0.15);
+
+    --backdrop-dialog: rgba(0, 0, 0, 0.65);
 }
 
 * {
@@ -27,30 +138,36 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-apple);
     font-size: 14px;
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: var(--transition-theme);
 }
 
 button,
 input,
 select {
-    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 button {
     cursor: pointer;
+    border: none;
+    background: none;
 }
 
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-    outline: 2px solid var(--purple);
-    outline-offset: 3px;
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
 }
 
 button:disabled {
-    opacity: 0.55;
+    opacity: 0.5;
     cursor: not-allowed;
 }
 

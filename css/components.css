@@ -1,247 +1,309 @@
 /* ==========================================================================
-   COMPONENTS: Tarjetas, estadísticas, botones, controles, diálogos y notificaciones
+   COMPONENTS: Tarjetas, controles, modales y botones estilo Apple
    ========================================================================== */
 
-/* Cuadrícula de estadísticas */
+/* ── Cuadrícula de estadísticas estilo Apple ────────────────────────────── */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 15px;
-    margin-bottom: 42px;
+    gap: 16px;
+    margin-bottom: 36px;
 }
 
 .stat-card {
-    padding: 21px;
+    padding: 20px 22px;
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     background: var(--panel);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s var(--ease-apple), box-shadow 0.3s var(--ease-apple), border-color 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-strong);
 }
 
 .stat-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
-    color: #a7a4b4;
-    font-size: 11px;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .stat-icon {
     display: grid;
     place-items: center;
     flex-shrink: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 9px;
-    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: transform 0.2s var(--ease-spring);
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.1);
 }
 
 .stat-icon.purple {
     color: var(--purple);
-    background: #a78bfa18;
+    background: var(--purple-tint);
 }
 
 .stat-icon.green {
     color: var(--green);
-    background: #65d6a418;
+    background: var(--green-tint);
 }
 
 .stat-icon.blue {
     color: var(--blue);
-    background: #78aaff18;
+    background: var(--blue-tint);
 }
 
 .stat-icon.orange {
     color: var(--orange);
-    background: #ffb86c18;
+    background: var(--orange-tint);
 }
 
 .stat-card>strong {
     display: block;
-    margin-top: 16px;
-    font-size: 29px;
-    letter-spacing: -1px;
+    margin-top: 14px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    line-height: 1.1;
 }
 
 .stat-card>p {
-    margin: 3px 0 0;
-    color: #777585;
-    font-size: 10px;
+    margin: 4px 0 0;
+    color: var(--text-tertiary);
+    font-size: 11px;
+    font-weight: 500;
 }
 
-/* Sección de biblioteca */
+/* ── Sección de biblioteca y barra de herramientas ──────────────────────── */
 .library-section {
-    padding-bottom: 34px;
+    padding-bottom: 40px;
 }
 
 .section-heading {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 23px;
+    gap: 16px;
+    margin-bottom: 22px;
 }
 
 .section-heading h2 {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 7px 0 0;
+    margin: 6px 0 0;
     font-size: 22px;
-    letter-spacing: -0.7px;
-}
-
-#visible-count {
-    display: grid;
-    place-items: center;
-    min-width: 24px;
-    height: 23px;
-    padding: 0 7px;
-    border-radius: 7px;
-    background: #a78bfa18;
-    color: #c1acff;
-    font-size: 11px;
-    letter-spacing: 0;
-}
-
-/* Botones principales y secundarios */
-.primary-button,
-.secondary-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    min-height: 40px;
-    padding: 0 15px;
-    border-radius: 10px;
-    font-size: 12px;
     font-weight: 700;
-    transition: transform 180ms, filter 180ms;
-}
-
-.primary-button {
-    border: 1px solid #b29aff;
-    background: linear-gradient(135deg, #b29aff, #8b67e8);
-    color: #17111f;
-    box-shadow: 0 4px 20px #8b5cf622;
-}
-
-.primary-button:hover,
-.secondary-button:hover {
-    filter: brightness(1.12);
-    transform: translateY(-1px);
-}
-
-.primary-button span {
-    font-size: 17px;
-}
-
-.secondary-button {
-    border: 1px solid var(--border);
-    background: #24232d;
+    letter-spacing: -0.025em;
     color: var(--text);
 }
 
-/* Barra de herramientas / Toolbar */
+#visible-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 24px;
+    padding: 0 8px;
+    border-radius: var(--radius-pill);
+    background: var(--accent-tint);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ── Botones estilo Apple ────────────────────────────────────────────────── */
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    background: var(--accent);
+    color: var(--accent-text);
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 113, 227, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s var(--ease-apple), background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 6px 18px rgba(0, 113, 227, 0.4);
+    transform: translateY(-1px);
+}
+
+.primary-button:active {
+    transform: scale(0.96);
+    background: var(--accent-active);
+}
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: var(--radius-pill);
+    background: var(--panel);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform 0.2s var(--ease-apple), background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.secondary-button:hover {
+    background: var(--panel-hover);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+}
+
+.secondary-button:active {
+    transform: scale(0.96);
+}
+
+/* ── Toolbar / Buscador y filtros estilo macOS / iOS ────────────────────── */
 .toolbar {
     display: flex;
-    gap: 10px;
-    margin-bottom: 23px;
+    gap: 12px;
+    margin-bottom: 28px;
 }
 
 .search-box {
+    position: relative;
     flex: 1;
-    min-width: 130px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    height: 42px;
-    padding: 0 12px;
+    background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    background: #17171d;
-    color: #a5a1b3;
+    border-radius: var(--radius-md);
+    padding: 0 14px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s var(--ease-apple);
 }
 
-.search-box>span {
-    font-size: 23px;
+.search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+.search-box span[aria-hidden] {
+    color: var(--text-tertiary);
+    font-size: 16px;
+    margin-right: 8px;
 }
 
 .search-box input {
     width: 100%;
-    min-width: 0;
-    background: transparent;
+    height: 42px;
     border: none;
-    outline: none;
+    background: transparent;
     color: var(--text);
-    font-size: 11px;
-}
-
-.search-box input:focus-visible {
+    font-size: 13px;
+    font-weight: 500;
     outline: none;
 }
 
 .search-box input::placeholder {
-    color: #777585;
+    color: var(--text-tertiary);
 }
 
-kbd {
-    padding: 2px 6px;
-    border: 1px solid #363541;
-    border-radius: 5px;
-    font-size: 10px;
+.search-box kbd {
+    padding: 2px 7px;
+    border-radius: 6px;
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-tertiary);
+    font-size: 11px;
+    font-weight: 600;
 }
 
 .select-wrap {
     position: relative;
 }
 
-.select-wrap select,
-.form-field select,
-.form-field input {
-    width: 100%;
-    min-height: 42px;
-    padding: 0 11px;
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    background: #17171d;
-    color: #ccc9d8;
-    outline-offset: 2px;
-    font-size: 11px;
-}
-
 .select-wrap select {
-    max-width: 190px;
-    height: 42px;
+    appearance: none;
+    height: 44px;
+    min-width: 170px;
+    padding: 0 36px 0 16px;
+    border-radius: var(--radius-md);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all 0.2s var(--ease-apple);
 }
 
-/* Cuadrícula de videojuegos */
+.select-wrap::after {
+    content: "⌄";
+    position: absolute;
+    right: 14px;
+    top: 45%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.select-wrap select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+/* ── Cuadrícula de videojuegos y Tarjetas estilo Apple ──────────────────── */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px 15px;
+    gap: 24px 18px;
 }
 
 .game-card {
     min-width: 0;
     overflow: hidden;
-    background: #19191f;
-    border: 1px solid #2a2933;
-    border-radius: 13px;
-    transition: transform 200ms, border-color 200ms, box-shadow 200ms;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    transition: transform 0.35s var(--ease-apple), box-shadow 0.35s var(--ease-apple), border-color 0.25s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .game-card:hover {
-    transform: translateY(-4px);
-    border-color: #55436f;
-    box-shadow: 0 12px 30px #0003;
+    transform: translateY(-6px) scale(1.015);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .cover-wrap {
     position: relative;
     overflow: hidden;
     aspect-ratio: 3 / 4;
-    background: linear-gradient(145deg, #30253f, #15141a);
+    background: var(--panel-secondary);
 }
 
 .game-cover {
@@ -249,7 +311,7 @@ kbd {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 350ms;
+    transition: transform 0.4s var(--ease-apple);
 }
 
 .game-card:hover .game-cover {
@@ -261,35 +323,37 @@ kbd {
     place-items: center;
     width: 100%;
     height: 100%;
-    color: #d1c0ff;
-    background: radial-gradient(circle at 50% 35%, #604a8c, #211a30 70%);
-    font-size: 45px;
-    font-weight: 800;
+    color: var(--accent);
+    background: var(--panel-secondary);
+    font-size: 44px;
 }
 
+/* Badges flotantes de estado estilo iOS Glass */
 .status-badge {
     position: absolute;
-    left: 9px;
-    bottom: 9px;
+    left: 10px;
+    bottom: 10px;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 5px 8px;
-    border: 1px solid #ffffff14;
-    border-radius: 6px;
-    background: #14131aeb;
-    color: #e7e2f0;
-    font-size: 9px;
-    font-weight: 700;
-    backdrop-filter: blur(10px);
+    gap: 6px;
+    padding: 4px 9px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-pill);
+    background: rgba(20, 20, 24, 0.75);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .status-badge::before {
     content: "";
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: var(--purple);
+    background: var(--accent);
 }
 
 .status-playing::before {
@@ -297,152 +361,211 @@ kbd {
 }
 
 .status-completed::before {
-    background: var(--blue);
+    background: var(--purple);
 }
 
 .status-wishlist::before {
     background: var(--orange);
 }
 
+/* Botón flotante de favorito */
 .favorite-button {
     position: absolute;
-    top: 9px;
-    right: 9px;
+    top: 10px;
+    right: 10px;
     display: grid;
     place-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ffffff20;
-    border-radius: 9px;
-    background: #111019c9;
-    color: white;
-    font-size: 16px;
-    backdrop-filter: blur(10px);
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: rgba(20, 20, 24, 0.72);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s var(--ease-spring), color 0.2s ease, background 0.2s ease;
+}
+
+.favorite-button:hover {
+    transform: scale(1.12);
+    color: var(--red);
+    background: rgba(20, 20, 24, 0.9);
 }
 
 .favorite-button.is-favorite {
-    color: #ff83ae;
-    background: #442037e8;
+    color: var(--red);
+    background: rgba(255, 59, 48, 0.2);
+    border-color: rgba(255, 59, 48, 0.4);
 }
 
+.favorite-button:active {
+    transform: scale(0.9);
+}
+
+/* Info de la tarjeta */
 .game-info {
-    padding: 12px 11px 11px;
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .game-genre {
-    color: #b7a0ff;
-    font-size: 9px;
-    font-weight: 700;
+    color: var(--text-tertiary);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
 }
 
 .game-title {
-    overflow: hidden;
-    margin: 5px 0 9px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    text-overflow: ellipsis;
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    line-height: 1.3;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .game-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
-    color: #9996a7;
-    font-size: 10px;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 500;
 }
 
 .game-rating {
-    color: #f2c879;
-    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--orange);
+    font-weight: 600;
 }
 
 .card-actions {
     display: flex;
-    gap: 6px;
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid #2c2a35;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
 }
 
 .card-action {
     flex: 1;
     min-width: 0;
-    padding: 6px 4px;
-    border: 1px solid #33313e;
-    border-radius: 6px;
-    background: #24222c;
-    color: #a8a5b6;
-    font-size: 10px;
-    font-weight: 700;
-    transition: background 160ms, color 160ms, border-color 160ms;
+    padding: 7px 6px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--panel-secondary);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    transition: all 0.2s var(--ease-apple);
+}
+
+.card-action.btn-add-action {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    font-weight: 600;
+}
+
+.card-action.btn-add-action:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 2px 10px rgba(0, 113, 227, 0.35);
+}
+
+.card-action.in-library {
+    background: var(--panel-secondary);
+    color: var(--text-tertiary);
+    border-color: var(--border-subtle);
+    cursor: default;
+    opacity: 0.75;
 }
 
 .card-action:hover {
-    background: #312e3e;
-    border-color: #4c465d;
-    color: white;
+    background: var(--panel-hover);
+    border-color: var(--border-strong);
+    color: var(--text);
 }
 
 .card-action.delete:hover {
-    border-color: #b95469;
-    color: #ff9cab;
+    border-color: var(--red);
+    color: var(--red);
+    background: var(--red-tint);
 }
 
-/* Estado vacío / Empty state */
+/* ── Estado Vacío (Empty State) ─────────────────────────────────────────── */
 .empty-state {
-    padding: 55px 15px;
-    border: 1px dashed #3b3547;
-    border-radius: 14px;
+    padding: 60px 20px;
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-xl);
+    background: var(--panel);
     text-align: center;
 }
 
 .empty-icon {
-    color: var(--purple);
-    font-size: 37px;
+    color: var(--accent);
+    font-size: 38px;
+    margin-bottom: 8px;
 }
 
 .empty-state h3 {
-    margin-bottom: 5px;
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
 }
 
 .empty-state p {
-    margin-bottom: 20px;
-    color: var(--muted);
-    font-size: 12px;
+    margin: 0 0 20px;
+    color: var(--text-secondary);
+    font-size: 13px;
 }
 
-/* Diálogo modal para añadir/editar */
+/* ── Diálogos modales estilo Apple (Sheet Dialogs) ───────────────────────── */
 .game-dialog {
-    width: min(510px, calc(100% - 28px));
+    width: min(520px, calc(100% - 32px));
     max-height: min(90vh, 780px);
     overflow-y: auto;
-    padding: 25px;
-    border: 1px solid #3c354c;
-    border-radius: 17px;
-    background: #1c1b24;
+    padding: 28px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-xl);
+    background: var(--panel);
     color: var(--text);
-    box-shadow: 0 25px 70px #000000a6;
+    box-shadow: var(--shadow-lg);
+    animation: modalScaleIn 0.25s var(--ease-apple);
 }
 
 .game-dialog::backdrop {
-    background: #000000aa;
-    backdrop-filter: blur(8px);
+    background: var(--backdrop-dialog);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
 }
 
 .dialog-header {
     display: flex;
     justify-content: space-between;
-    align-items: start;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    margin-bottom: 22px;
 }
 
 .dialog-header h2 {
     margin: 4px 0 0;
-    font-size: 21px;
-    letter-spacing: -0.7px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--text);
 }
 
 .icon-button {
@@ -451,69 +574,587 @@ kbd {
     width: 32px;
     height: 32px;
     border: 1px solid var(--border);
-    border-radius: 8px;
-    background: #252431;
-    color: #9f9dae;
+    border-radius: 50%;
+    background: var(--panel-secondary);
+    color: var(--text-secondary);
+    font-size: 13px;
+    transition: all 0.2s var(--ease-apple);
 }
 
 .icon-button:hover {
-    color: white;
-    border-color: #4b485d;
+    background: var(--panel-hover);
+    color: var(--text);
+    border-color: var(--border-strong);
+    transform: scale(1.08);
 }
 
 .form-field {
     display: grid;
-    gap: 6px;
-    margin-bottom: 14px;
-    font-size: 11px;
+    gap: 7px;
+    margin-bottom: 16px;
+    font-size: 12px;
 }
 
 .form-field span {
-    color: #b8b4c7;
+    color: var(--text);
     font-weight: 600;
 }
 
 .form-field small {
-    color: var(--muted);
-    font-size: 10px;
+    color: var(--text-tertiary);
+    font-size: 11px;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--panel-secondary);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s var(--ease-apple);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
+    background: var(--panel);
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 14px;
 }
 
 .dialog-actions {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 10px;
-    margin-top: 8px;
+    margin-top: 14px;
 }
 
-/* Notificación flotante Toast */
+/* ── Botón de verificación y previsualización de carátula ─────────────────── */
+.verify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-pill);
+    background: var(--accent-tint);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-apple);
+}
+
+.verify-btn:hover {
+    background: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.cover-preview-wrap {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--panel-secondary);
+}
+
+.cover-preview-img {
+    width: 44px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: var(--shadow-sm);
+}
+
+.cover-preview-info {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.cover-preview-info strong {
+    display: block;
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* ── Pestañas de autenticación ───────────────────────────────────────────── */
+.auth-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 4px;
+    border-radius: var(--radius-pill);
+    background: var(--panel-secondary);
+}
+
+.auth-tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all 0.2s var(--ease-apple);
+}
+
+.auth-tab-btn.active {
+    background: var(--panel);
+    color: var(--text);
+    box-shadow: var(--shadow-sm);
+}
+
+.auth-user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+.auth-avatar-large {
+    width: 68px;
+    height: 68px;
+    border-radius: 20px;
+    background: var(--accent-tint);
+    border: 2px solid var(--accent);
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   TARJETA EN PRIMER PLANO (GAME DETAIL MODAL) ESTILO APPLE
+   ========================================================================== */
+.game-detail-dialog {
+    width: min(740px, calc(100% - 32px));
+    max-height: min(92vh, 840px);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-xl);
+    background: var(--panel);
+    color: var(--text);
+    box-shadow: var(--shadow-lg);
+    padding: 0;
+    overflow: hidden;
+    animation: modalScaleIn 0.28s var(--ease-apple);
+}
+
+.game-detail-dialog::backdrop {
+    background: var(--backdrop-dialog);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+}
+
+.detail-card-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 28px;
+    padding: 34px;
+    max-height: min(92vh, 840px);
+    overflow-y: auto;
+}
+
+.detail-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s var(--ease-apple);
+    z-index: 10;
+}
+
+.detail-close-btn:hover {
+    background: var(--panel-hover);
+    color: var(--text);
+    border-color: var(--border-strong);
+    transform: scale(1.08);
+}
+
+.detail-cover-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-cover-wrap {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    background: var(--panel-secondary);
+}
+
+.detail-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.detail-cover-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 54px;
+    background: var(--panel-secondary);
+    color: var(--accent);
+}
+
+.detail-floating-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    background: rgba(20, 20, 24, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 10px;
+    font-weight: 600;
+    color: #ffffff;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.detail-eyebrows {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.detail-genre-tag,
+.detail-platform-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: var(--radius-pill);
+    background: var(--accent-tint);
+    color: var(--accent);
+    border: 1px solid transparent;
+}
+
+.detail-platform-tag {
+    color: var(--purple);
+    background: var(--purple-tint);
+}
+
+.detail-title {
+    margin: 4px 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    color: var(--text);
+}
+
+.detail-meta {
+    margin: 0 0 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.detail-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.detail-metric-card {
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+}
+
+.metric-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+    margin-bottom: 3px;
+}
+
+.metric-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.metric-value.rating-val {
+    color: var(--orange);
+}
+
+.metric-value.status-val {
+    color: var(--green);
+    font-size: 13px;
+}
+
+/* Sección de valoración interactiva */
+.detail-rating-section {
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    margin-bottom: 22px;
+}
+
+.rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.rating-preview-badge {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--orange);
+    background: var(--orange-tint);
+    padding: 3px 8px;
+    border-radius: var(--radius-pill);
+}
+
+.rating-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.star-rating-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.star-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: all 0.16s var(--ease-spring);
+}
+
+.star-btn:hover,
+.star-btn.active {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    transform: scale(1.1);
+}
+
+.rate-save-btn {
+    padding: 7px 14px;
+    font-size: 12px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+}
+
+.detail-actions-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.actions-primary-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.detail-action-btn {
+    flex: 1;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s var(--ease-apple);
+}
+
+.detail-action-btn.in-library {
+    background: var(--accent-tint);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.detail-action-btn.in-wishlist {
+    background: var(--orange-tint);
+    color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.icon-toggle-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--panel-secondary);
+    color: var(--text-secondary);
+    font-size: 19px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-spring);
+    flex-shrink: 0;
+}
+
+.icon-toggle-btn:hover {
+    border-color: var(--red);
+    color: var(--red);
+    transform: scale(1.08);
+}
+
+.icon-toggle-btn.is-favorite {
+    background: var(--red-tint);
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.actions-secondary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.status-change-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.detail-select {
+    height: 34px;
+    padding: 0 10px;
+    border-radius: var(--radius-sm);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.extra-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.detail-text-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    transition: color 0.15s ease;
+}
+
+.detail-text-btn:hover {
+    color: var(--text);
+}
+
+.detail-text-btn.danger:hover {
+    color: var(--red);
+}
+
+/* ── Notificación flotante Toast estilo Dynamic Island ───────────────────── */
 .toast {
     position: fixed;
-    z-index: 20;
-    right: 24px;
-    bottom: 24px;
-    max-width: min(360px, calc(100% - 32px));
-    padding: 13px 18px;
-    border: 1px solid #504068;
-    border-radius: 11px;
-    background: #24202f;
-    color: #e5dcff;
-    box-shadow: 0 10px 40px #0005;
-    font-size: 12px;
+    z-index: 50;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px) scale(0.95);
+    min-width: 260px;
+    max-width: min(480px, calc(100% - 32px));
+    padding: 12px 22px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-pill);
+    background: var(--panel-glass);
+    color: var(--text);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    box-shadow: var(--shadow-lg);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
     opacity: 0;
-    transform: translateY(10px);
     pointer-events: none;
-    transition: opacity 180ms, transform 180ms;
+    transition: opacity 0.28s var(--ease-apple), transform 0.28s var(--ease-spring);
 }
 
 .toast.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* Animaciones */
+@keyframes modalScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Accesibilidad */
@@ -527,3 +1168,413 @@ kbd {
     white-space: nowrap;
     border: 0;
 }
+
+/* ==========================================================================
+   AUTH GATE — Pantalla completa de inicio de sesión / registro
+   Estilo Apple: glassmorphism, orbes difusos, animaciones suaves
+   ========================================================================== */
+
+.auth-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    overflow: hidden;
+    /* Entrada con fade */
+    animation: agFadeIn 0.6s var(--ease-apple) both;
+}
+
+.auth-gate.ag-hiding {
+    animation: agFadeOut 0.45s var(--ease-apple) both;
+    pointer-events: none;
+}
+
+/* ── Fondo con orbes difusos estilo Apple ──────────────────────────────── */
+.auth-gate-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.ag-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+}
+
+.ag-orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #0071e3 0%, transparent 70%);
+    top: -120px;
+    left: -100px;
+    animation: agOrbFloat 12s ease-in-out infinite;
+}
+
+.ag-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #5e5ce6 0%, transparent 70%);
+    bottom: -80px;
+    right: -80px;
+    animation: agOrbFloat 15s ease-in-out infinite reverse;
+}
+
+.ag-orb-3 {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, #30d158 0%, transparent 70%);
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    animation: agOrbFloat 10s ease-in-out infinite 3s;
+    opacity: 0.2;
+}
+
+[data-theme="dark"] .ag-orb-1 { background: radial-gradient(circle, #2997ff 0%, transparent 70%); opacity: 0.25; }
+[data-theme="dark"] .ag-orb-2 { background: radial-gradient(circle, #7d7aff 0%, transparent 70%); opacity: 0.2; }
+[data-theme="dark"] .ag-orb-3 { background: radial-gradient(circle, #30d158 0%, transparent 70%); opacity: 0.15; }
+
+@keyframes agOrbFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+}
+
+/* ── Tarjeta central glassmorphic ──────────────────────────────────────── */
+.auth-gate-card {
+    position: relative;
+    z-index: 1;
+    width: min(420px, calc(100vw - 32px));
+    padding: 40px 36px 32px;
+    border-radius: 24px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    box-shadow: 0 32px 64px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.08);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    animation: agCardIn 0.7s var(--ease-apple) 0.1s both;
+}
+
+[data-theme="dark"] .auth-gate-card {
+    box-shadow: 0 32px 64px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* ── Branding ──────────────────────────────────────────────────────────── */
+.auth-gate-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.ag-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,113,227,0.3);
+    animation: agLogoBounce 0.9s var(--ease-spring) 0.2s both;
+}
+
+.ag-title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    margin: 0;
+    background: linear-gradient(135deg, var(--accent) 0%, #5e5ce6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ag-tagline {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ── Tabs Login / Registro ─────────────────────────────────────────────── */
+.ag-tabs {
+    display: flex;
+    background: var(--bg-alt, var(--bg));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 3px;
+    margin-bottom: 24px;
+    gap: 2px;
+}
+
+.ag-tab {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 9px;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.25s var(--ease-apple), color 0.2s, box-shadow 0.25s;
+    font-family: inherit;
+}
+
+.ag-tab.active {
+    background: var(--panel);
+    color: var(--text);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .ag-tab.active {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ── Paneles de formulario ─────────────────────────────────────────────── */
+.ag-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ag-panel[hidden] { display: none; }
+
+/* Animación de entrada al cambiar de panel */
+.ag-panel:not([hidden]) {
+    animation: agPanelIn 0.3s var(--ease-apple) both;
+}
+
+.ag-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.ag-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.ag-input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.ag-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.ag-input::placeholder {
+    color: var(--muted);
+    opacity: 0.7;
+}
+
+/* ── Campo de contraseña con botón ojo ─────────────────────────────────── */
+.ag-password-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ag-password-wrap .ag-input {
+    padding-right: 44px;
+}
+
+.ag-eye-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.55;
+    padding: 4px;
+    border-radius: 6px;
+    transition: opacity 0.15s;
+    line-height: 1;
+}
+
+.ag-eye-btn:hover { opacity: 1; }
+
+/* ── Mensaje de error ──────────────────────────────────────────────────── */
+.ag-error {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: color-mix(in srgb, #ff3b30 12%, transparent);
+    border: 1px solid color-mix(in srgb, #ff3b30 25%, transparent);
+    color: #ff3b30;
+    font-size: 13px;
+    margin-bottom: 12px;
+    animation: agShakeX 0.4s var(--ease-apple);
+}
+
+[data-theme="dark"] .ag-error {
+    background: color-mix(in srgb, #ff453a 15%, transparent);
+    border-color: color-mix(in srgb, #ff453a 30%, transparent);
+    color: #ff6b6b;
+}
+
+/* ── Botón de envío principal ──────────────────────────────────────────── */
+.ag-submit-btn {
+    width: 100%;
+    padding: 13px 20px;
+    margin-top: 6px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s var(--ease-spring), box-shadow 0.2s;
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.ag-submit-btn:hover {
+    background: color-mix(in srgb, var(--accent) 85%, #000);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.ag-submit-btn:active {
+    transform: scale(0.98);
+}
+
+.ag-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── Nota de pie ───────────────────────────────────────────────────────── */
+.ag-footer-note {
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    opacity: 0.7;
+}
+
+/* ── Welcome banner tras el login (mostrado en la app principal) ─────── */
+#welcome-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 24px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--accent) 10%, var(--panel)) 0%,
+        var(--panel) 100%);
+    border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border));
+    animation: agCardIn 0.5s var(--ease-apple) both;
+}
+
+#welcome-banner .wb-text h2 {
+    margin: 0 0 3px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+#welcome-banner .wb-text p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+#welcome-banner .wb-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#welcome-close {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background 0.15s;
+    line-height: 1;
+}
+
+#welcome-close:hover { background: var(--hover); }
+
+/* ── Keyframes propios del auth gate ──────────────────────────────────── */
+@keyframes agFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes agFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes agCardIn {
+    from { opacity: 0; transform: translateY(24px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes agLogoBounce {
+    0% { opacity: 0; transform: scale(0.5); }
+    70% { transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes agPanelIn {
+    from { opacity: 0; transform: translateX(8px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes agShakeX {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+/* ── Responsive del auth gate ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+    .auth-gate-card {
+        padding: 32px 22px 24px;
+        border-radius: 20px;
+    }
+
+    .ag-logo { width: 52px; height: 52px; }
+    .ag-title { font-size: 22px; }
+}
+

@@ -1,6 +1,5 @@
 /* ==========================================================================
-   GAMEVAULT — Hoja de estilos principal
-   Organizada de forma modular en componentes limpios y mantenibles
+   VAYLOR — Hoja de estilos principal estilo Apple
    ========================================================================== */
 
 @import url("variables.css");
@@ -9,18 +8,18 @@
 @import url("responsive.css");
 
 /* =============================================
-   SPLASH SCREEN
+   SPLASH SCREEN ESTILO APPLE
    ============================================= */
 .splash-screen {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: #0d0221;
+    background: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s var(--ease-apple);
     pointer-events: all;
 }
 
@@ -34,25 +33,41 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    animation: splashPop 0.4s ease;
+    animation: appleSplashPop 0.5s var(--ease-spring);
 }
 
 .splash-logo {
-    width: 90px;
-    height: 90px;
+    width: 84px;
+    height: 84px;
     border-radius: 22px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), 0 0 25px rgba(0, 113, 227, 0.2);
 }
 
 .splash-name {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 0.25em;
-    color: #fff;
-    opacity: 0.85;
+    font-family: var(--font-apple);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text);
+    opacity: 0.9;
 }
 
-@keyframes splashPop {
-    from { transform: scale(0.85); opacity: 0; }
-    to   { transform: scale(1);    opacity: 1; }
+@keyframes appleSplashPop {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ── Ocultar auth gate de inmediato cuando hay sesión (antes de que cargue JS) */
+html[data-has-session="true"] #auth-gate {
+    display: none !important;
+}
+
+html[data-has-session="true"] .apple-app {
+    display: block !important;
 }

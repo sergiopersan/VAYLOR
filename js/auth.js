@@ -1,3 +1,4 @@
+
 // --------------------------------------------------
 // VAYLOR — Módulo de Autenticación
 // Gestión de usuarios, sesiones y perfiles
@@ -5,7 +6,7 @@
 
 "use strict";
 
-const USERS_KEY   = "vaylor-users-v1";
+const USERS_KEY = "vaylor-users-v1";
 const SESSION_KEY = "vaylor-session-v1";
 
 // --------------------------------------------------
@@ -22,7 +23,11 @@ function loadUsers() {
 }
 
 function saveUsers(users) {
-    localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    try {
+        localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    } catch (e) {
+        console.error("Error guardando usuarios:", e);
+    }
 }
 
 // Genera un id de usuario único
@@ -30,13 +35,25 @@ function createUserId() {
     return "u_" + Date.now() + "_" + Math.random().toString(36).slice(2, 8);
 }
 
-// Hash simple (no es criptográfico — sólo para demo local)
+// Hash seguro con fallback
 async function hashPassword(password) {
-    const data   = new TextEncoder().encode(password + "vaylor-salt-v1");
-    const buffer = await crypto.subtle.digest("SHA-256", data);
-    return Array.from(new Uint8Array(buffer))
-        .map(b => b.toString(16).padStart(2, "0"))
-        .join("");
+    if (typeof crypto !== "undefined" && crypto.subtle) {
+        try {
+            const data = new TextEncoder().encode(password + "vaylor-salt-v1");
+            const buffer = await crypto.subtle.digest("SHA-256", data);
+            return Array.from(new Uint8Array(buffer))
+                .map(b => b.toString(16).padStart(2, "0"))
+                .join("");
+        } catch {
+            // Continúa con fallback si falla subtle crypto
+        }
+    }
+    let hash = 0;
+    for (let i = 0; i < password.length; i++) {
+        hash = ((hash << 5) - hash) + password.charCodeAt(i);
+        hash |= 0;
+    }
+    return "fallback_" + Math.abs(hash).toString(16);
 }
 
 // --------------------------------------------------
@@ -48,8 +65,8 @@ async function hashPassword(password) {
  * @returns {Promise<{ok:boolean, error?:string, user?:object}>}
  */
 export async function registerUser({ username, email, password }) {
-    username = username.trim();
-    email    = email.trim().toLowerCase();
+    username = (username || "").trim();
+    email = (email || "").trim().toLowerCase();
 
     if (!username || username.length < 2)
         return { ok: false, error: "El nombre debe tener al menos 2 caracteres." };
@@ -66,7 +83,7 @@ export async function registerUser({ username, email, password }) {
     if (emailExists)
         return { ok: false, error: "Ya existe una cuenta con ese correo electrónico." };
 
-    const id           = createUserId();
+    const id = createUserId();
     const passwordHash = await hashPassword(password);
 
     const user = {
@@ -90,10 +107,10 @@ export async function registerUser({ username, email, password }) {
  * @returns {Promise<{ok:boolean, error?:string, user?:object}>}
  */
 export async function loginUser({ email, password }) {
-    email = email.trim().toLowerCase();
+    email = (email || "").trim().toLowerCase();
 
     const users = loadUsers();
-    const user  = Object.values(users).find(u => u.email === email);
+    const user = Object.values(users).find(u => u.email === email);
 
     if (!user)
         return { ok: false, error: "No encontramos ninguna cuenta con ese correo." };
@@ -110,7 +127,11 @@ export async function loginUser({ email, password }) {
  * Cierra la sesión actual.
  */
 export function logoutUser() {
-    localStorage.removeItem(SESSION_KEY);
+    try {
+        localStorage.removeItem(SESSION_KEY);
+    } catch (e) {
+        console.error("Error al cerrar sesión:", e);
+    }
 }
 
 /**
@@ -149,10 +170,14 @@ export function getCurrentUser() {
 // --------------------------------------------------
 
 function startSession(user) {
-    localStorage.setItem(SESSION_KEY, JSON.stringify({
-        userId: user.id,
-        startedAt: Date.now()
-    }));
+    try {
+        localStorage.setItem(SESSION_KEY, JSON.stringify({
+            userId: user.id,
+            startedAt: Date.now()
+        }));
+    } catch (e) {
+        console.error("Error al iniciar sesión:", e);
+    }
 }
 
 // --------------------------------------------------

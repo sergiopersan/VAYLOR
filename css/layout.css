@@ -1,181 +1,273 @@
 /* ==========================================================================
-   LAYOUT: Estructura general, sidebar, cabecera, hero section y pie de página
+   VAYLOR — Nuevo Layout Unificado estilo Apple (App Store / macOS / iPadOS)
+   Sin barra lateral rígida: diseño amplio, fluido y centrado en los juegos
    ========================================================================== */
 
-.app-layout {
+.apple-app {
     min-height: 100vh;
-}
-
-/* Sidebar lateral */
-.sidebar {
-    width: 246px;
-    position: fixed;
-    inset: 0 auto 0 0;
     display: flex;
     flex-direction: column;
-    padding: 30px 19px 18px;
-    background: var(--sidebar);
-    border-right: 1px solid var(--border);
-    z-index: 5;
+    background: var(--bg);
+    transition: var(--transition-theme);
 }
 
+/* ── Cabecera Superior Unificada Glassmorphic ────────────────────────────── */
+.apple-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--topbar-bg);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition-theme);
+}
+
+.header-inner {
+    max-width: 1740px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Marca / Logo */
 .brand {
     display: flex;
     align-items: center;
     gap: 11px;
-    margin: 0 0 49px 4px;
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: -1px;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    flex-shrink: 0;
 }
 
 .brand-icon {
     display: block;
-    width: 37px;
-    height: 37px;
+    width: 36px;
+    height: 36px;
     border-radius: 11px;
-    box-shadow: 0 5px 24px #895cf444;
+    box-shadow: 0 4px 14px rgba(0, 113, 227, 0.22);
     object-fit: cover;
+    transition: transform 0.25s var(--ease-spring);
+}
+
+.brand:hover .brand-icon {
+    transform: scale(1.08);
 }
 
 .brand-accent {
-    color: var(--purple);
+    color: var(--accent);
 }
 
-.side-label,
-.eyebrow {
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.7px;
+/* ── Pestañas Segmentadas de Navegación estilo Apple (Tabs Bar) ──────────── */
+.apple-tabs-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 680px;
 }
 
-.side-label {
-    padding-left: 12px;
-    margin-bottom: 14px;
-}
-
-.navigation {
-    display: grid;
-    gap: 6px;
+.tabs-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px;
+    border-radius: var(--radius-pill);
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-theme);
 }
 
 .nav-link {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    width: 100%;
-    padding: 12px 13px;
-    color: #a6a4b4;
+    gap: 7px;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
     background: transparent;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    text-align: left;
-    transition: background 180ms, color 180ms;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s ease, background-color 0.2s var(--ease-apple), transform 0.16s var(--ease-spring);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-link:hover {
-    background: #ffffff08;
-    color: white;
+    color: var(--text);
+    background: var(--panel-hover);
 }
 
 .nav-link.active {
-    background: #9b7aff16;
-    border-color: #a78bfa20;
-    color: #c8b7ff;
+    background: var(--panel);
+    color: var(--accent);
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    transform: scale(1.02);
+}
+
+[data-theme="dark"] .nav-link.active {
+    background: var(--panel-hover);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:active {
+    transform: scale(0.96);
 }
 
 .nav-icon {
-    width: 19px;
-    text-align: center;
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 1;
 }
 
-.sidebar-bottom {
-    margin-top: auto;
-}
-
-.sidebar-promo {
-    padding: 17px;
-    background: linear-gradient(145deg, #282036, #1b1924);
-    border: 1px solid #443455;
-    border-radius: 14px;
-}
-
-.promo-symbol {
-    color: var(--purple);
-    font-size: 23px;
-    margin-bottom: 12px;
-}
-
-.sidebar-promo strong {
-    display: block;
-    font-size: 13px;
-}
-
-.sidebar-promo p {
-    color: var(--muted);
-    font-size: 11px;
-    line-height: 1.7;
-    margin: 9px 0 0;
-}
-
-.sidebar-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 22px 4px 0;
-    color: #666575;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.sidebar-footer span {
-    font-weight: 500;
-    letter-spacing: 0;
-}
-
-/* Área de contenido principal */
-.main-content {
-    margin-left: 246px;
-    padding: 0 42px;
-    min-height: 100vh;
-    max-width: 1800px;
-}
-
-/* Cabecera / Topbar */
-.topbar {
-    height: 77px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border);
-}
-
-.breadcrumb,
-.topbar-actions {
+/* ── Acciones de Cabecera (Buscador, Tema, Perfil) ───────────────────────── */
+.header-actions {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
-.breadcrumb {
-    color: #a8a5b4;
-    font-size: 12px;
+/* Buscador en cápsula Apple */
+.header-actions .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 38px;
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: 0 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s var(--ease-apple);
 }
 
-.breadcrumb strong {
+.header-actions .search-box:focus-within {
+    width: 280px;
+    background: var(--panel);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+.header-actions .search-box span[aria-hidden] {
+    color: var(--text-tertiary);
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.header-actions .search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
     color: var(--text);
+    font-size: 12px;
+    font-weight: 500;
+    outline: none;
+}
+
+.header-actions .search-box input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.header-actions .search-box kbd {
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text-tertiary);
+    font-size: 10px;
     font-weight: 600;
 }
 
-.muted,
-.sync-label {
-    color: var(--muted);
+/* Conmutador de Modo Oscuro / Claro */
+.theme-toggle-btn {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-pill);
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.25s var(--ease-spring);
+    overflow: hidden;
 }
 
-.sync-label {
-    font-size: 11px;
+.theme-toggle-btn:hover {
+    transform: scale(1.08);
+    background: var(--panel);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+}
+
+.theme-toggle-btn:active {
+    transform: scale(0.92);
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+    position: absolute;
+    font-size: 16px;
+    transition: transform 0.4s var(--ease-spring), opacity 0.3s ease;
+}
+
+.theme-icon-sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.theme-icon-moon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.4);
+}
+
+[data-theme="dark"] .theme-icon-sun {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.4);
+}
+
+[data-theme="dark"] .theme-icon-moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Píldora de Usuario Apple */
+.user-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    height: 38px;
+    padding: 0 12px 0 10px;
+    border-radius: var(--radius-pill);
+    background: var(--panel-secondary);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    color: var(--text);
+    transition: all 0.2s var(--ease-apple);
+}
+
+.user-pill-btn:hover {
+    background: var(--panel);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
 }
 
 .online-dot {
@@ -183,138 +275,334 @@
     height: 7px;
     border-radius: 50%;
     background: var(--green);
-    box-shadow: 0 0 10px #65d6a455;
+    box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
 }
 
-.avatar {
-    display: grid;
-    place-items: center;
-    width: 35px;
-    height: 35px;
-    padding: 0;
+.sync-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    max-width: 110px;
     overflow: hidden;
-    border-radius: 11px;
-    background: #292333;
-    border: 1px solid #47375f;
-    cursor: pointer;
-    box-shadow: 0 3px 12px #00000044;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.avatar img {
-    width: 100%;
-    height: 100%;
+.avatar-mini {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     object-fit: cover;
     display: block;
 }
 
-/* Sección de bienvenida (Hero banner) */
-.welcome {
-    min-height: 232px;
-    position: relative;
-    overflow: hidden;
+/* ── Contenedor Principal (Apple Canvas) ─────────────────────────────────── */
+.apple-main {
+    flex: 1;
+    max-width: 1740px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 32px 64px;
+}
+
+/* ── Fila de Cabecera: Título + Métricas Compactas de Cristal + Botón ──── */
+.view-hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 35px 42px;
-    margin: 27px 0 23px;
-    border: 1px solid #373047;
-    border-radius: 19px;
-    background:
-        radial-gradient(ellipse at 80% 60%, #8255ce25, transparent 42%),
-        linear-gradient(110deg, #201b2c, #17161f 66%, #211a2b);
+    gap: 20px;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
 }
 
-.welcome>div:first-child {
-    position: relative;
-    z-index: 1;
+.view-title-block {
+    display: flex;
+    flex-direction: column;
 }
 
-.welcome .eyebrow {
-    color: #b9a1ff;
+.view-eyebrow {
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
 }
 
-.welcome h1 {
-    margin: 15px 0 10px;
-    font-size: clamp(29px, 3vw, 43px);
-    line-height: 1.15;
-    letter-spacing: -2px;
+.title-with-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.welcome h1 span {
-    color: var(--purple);
-}
-
-.welcome-description {
-    max-width: 410px;
+.title-with-badge h1 {
     margin: 0;
-    color: #aaa5ba;
-    font-size: 12px;
-    line-height: 1.9;
+    font-size: clamp(26px, 2.6vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    color: var(--text);
+    line-height: 1.15;
 }
 
-.welcome-art {
-    position: absolute;
-    width: 270px;
-    height: 270px;
-    right: 35px;
-    top: 50%;
-    transform: translateY(-50%);
+.count-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 26px;
+    padding: 0 10px;
+    border-radius: var(--radius-pill);
+    background: var(--accent-tint);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: inset 0 0 0 1px rgba(0, 113, 227, 0.15);
+}
+
+/* Cápsula de Métricas de Cristal Apple (Compacta, horizontal, limpia) */
+.apple-metrics-capsule {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 20px;
+    border-radius: var(--radius-pill);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-theme), transform 0.25s var(--ease-apple);
+}
+
+.apple-metrics-capsule:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+}
+
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.metric-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
     display: grid;
     place-items: center;
+    font-size: 13px;
+    font-weight: 700;
 }
 
-.art-orbit {
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    border: 1px solid #b7a0ff24;
-    border-radius: 50%;
+.metric-icon.purple {
+    color: var(--purple);
+    background: var(--purple-tint);
 }
 
-.orbit-two {
-    width: 165px;
-    height: 165px;
-    border-color: #b7a0ff3d;
+.metric-icon.green {
+    color: var(--green);
+    background: var(--green-tint);
 }
 
-.art-core {
+.metric-icon.blue {
+    color: var(--blue);
+    background: var(--blue-tint);
+}
+
+.metric-icon.orange {
+    color: var(--orange);
+    background: var(--orange-tint);
+}
+
+.metric-num {
     display: block;
-    width: 95px;
-    height: 95px;
-    border-radius: 26px;
-    transform: rotate(-10deg);
-    box-shadow: 0 0 70px #9666f355, 0 10px 30px #00000088;
-    object-fit: cover;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    line-height: 1.1;
 }
 
-.art-star {
+.metric-tag {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+}
+
+.metric-separator {
+    width: 1px;
+    height: 22px;
+    background: var(--border);
+}
+
+.add-game-btn {
+    padding: 11px 22px;
+    font-size: 13px;
+    box-shadow: 0 4px 14px rgba(0, 113, 227, 0.3);
+}
+
+/* ── Barra de Filtros Apple: Chips de Géneros + Ordenar ─────────────────── */
+.apple-filters-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 26px;
+    padding-bottom: 4px;
+}
+
+.genre-chips-scroll {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 4px 2px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.genre-chips-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.genre-chip {
+    white-space: nowrap;
+    padding: 7px 15px;
+    border-radius: var(--radius-pill);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all 0.2s var(--ease-spring);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.genre-chip:hover {
+    color: var(--text);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+}
+
+.genre-chip.active {
+    background: var(--text);
+    color: var(--bg);
+    font-weight: 600;
+    border-color: var(--text);
+    box-shadow: var(--shadow-md);
+    transform: scale(1.02);
+}
+
+.genre-chip:active {
+    transform: scale(0.95);
+}
+
+.filters-end {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.sort-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.sort-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.sort-select-wrap select {
+    appearance: none;
+    height: 36px;
+    padding: 0 32px 0 14px;
+    border-radius: var(--radius-pill);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all 0.2s var(--ease-apple);
+}
+
+.sort-select-wrap::after {
+    content: "⌄";
     position: absolute;
-    color: #d0bdff;
+    right: 12px;
+    top: 48%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    font-size: 14px;
+    pointer-events: none;
 }
 
-.star-one {
-    right: 25px;
-    top: 60px;
-    font-size: 27px;
+.sort-select-wrap select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
 }
 
-.star-two {
-    left: 12px;
-    bottom: 62px;
-    font-size: 22px;
+/* ── Escaparate de Videojuegos ───────────────────────────────────────────── */
+.games-showcase {
+    position: relative;
+    min-height: 400px;
 }
 
-/* Pie de página */
+/* ── Animación Fluida de Cambio de Pestañas (Apple Spring Cross-fade) ──── */
+.game-grid.tab-animating {
+    animation: appleTabCrossfade 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes appleTabCrossfade {
+    0% {
+        opacity: 0;
+        transform: translateY(14px) scale(0.985);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.game-grid.tab-animating .game-card {
+    animation: appleCardSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes appleCardSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Pie de página estilo Apple ─────────────────────────────────────────── */
 .main-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 15px;
-    padding: 22px 0;
+    padding: 40px 0 10px;
     border-top: 1px solid var(--border);
-    color: #777585;
-    font-size: 10px;
+    color: var(--text-tertiary);
+    font-size: 12px;
+    font-weight: 500;
+    transition: var(--transition-theme);
 }
 
 .footer-heart {
-    color: #c294ff;
+    color: var(--red);
 }

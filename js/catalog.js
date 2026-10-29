@@ -1,5 +1,5 @@
 // --------------------------------------------------
-// GAMEVAULT — Módulo de Catálogo Externo
+// GAMEVAULT / VAYLOR — Módulo de Catálogo Externo
 // --------------------------------------------------
 
 import { escapeHTML } from "./ui.js";
@@ -65,7 +65,7 @@ export function getFilteredCatalogGames(query, genre, sortOrder) {
 
 export function renderCatalogCard(game, libraryGames) {
     const title = String(game.title || game.name || "Juego");
-    const cover = game.cover || "";
+    const cover = game.cover || (game.appId ? `https://cdn.akamai.steamstatic.com/steam/apps/${game.appId}/library_600x900.jpg` : "");
 
     const coverMarkup = cover
         ? `<img class="game-cover"
@@ -74,7 +74,7 @@ export function renderCatalogCard(game, libraryGames) {
       loading="lazy"
       referrerpolicy="no-referrer"
       data-cover-image
-      onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+      onerror="this.hidden=true; if(this.nextElementSibling) this.nextElementSibling.hidden=false;">
      <div class="cover-placeholder" hidden aria-hidden="true">🎮</div>`
         : `<div class="cover-placeholder" aria-label="Sin portada">🎮</div>`;
 
@@ -112,18 +112,15 @@ export function renderCatalogCard(game, libraryGames) {
 
           <div class="game-meta">
             <span title="${escapeHTML(platformFull)}">${escapeHTML(game.developer || platformFull)}</span>
-            <span class="game-rating">★ ${game.rating ? game.rating : "—"}</span>
+            <span class="game-rating">★ ${game.rating ? Number(game.rating).toLocaleString("es-ES") : "—"}</span>
           </div>
 
           <div class="card-actions" style="margin-top: 10px;">
             <button
-              class="card-action"
+              class="card-action ${alreadyInLibrary ? "in-library" : "btn-add-action"}"
               data-action="add-from-catalog"
               data-catalog-id="${escapeHTML(game.id || title)}"
               ${alreadyInLibrary ? "disabled" : ""}
-              style="${alreadyInLibrary
-                ? "opacity:0.55;cursor:default;background:#24232d;color:#999;border-color:#333;"
-                : "background:#8b5cf6;color:white;border-color:#a78bfa;font-weight:700;cursor:pointer;"}"
             >${alreadyInLibrary ? "✓ En biblioteca" : "＋ Añadir a biblioteca"}</button>
           </div>
         </div>

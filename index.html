@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101014">
-    <meta name="description" content="GameVault, tu biblioteca personal de videojuegos.">
+    <meta name="theme-color" content="#f5f5f7">
+    <meta name="description"
+        content="Vaylor, tu biblioteca personal y catálogo de videojuegos con diseño estilo Apple.">
     <title>VAYLOR</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,138 +14,176 @@
     <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="apple-touch-icon" href="assets/icon.png">
     <link rel="stylesheet" href="css/main.css">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem("vaylor-theme");
+            if (savedTheme) {
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+            // Pre-comprobación de sesión para evitar flash de pantalla incorrecta
+            try {
+                const session = localStorage.getItem("vaylor-session-v1");
+                if (session) {
+                    const parsed = JSON.parse(session);
+                    const users = JSON.parse(localStorage.getItem("vaylor-users-v1") || "{}");
+                    if (parsed && parsed.userId && users[parsed.userId]) {
+                        // Hay sesión válida → marcar para que el auth gate empiece oculto
+                        document.documentElement.dataset.hasSession = "true";
+                    }
+                }
+            } catch (e) { /* ignorar errores */ }
+        })();
+    </script>
     <script src="js/app.js" type="module"></script>
 </head>
 
 <body>
 
-    <!-- Pantalla de carga -->
+    <!-- Pantalla de carga estilo Apple -->
     <div id="splash-screen" class="splash-screen">
         <div class="splash-content">
             <img src="assets/icon.png" alt="Vaylor" class="splash-logo">
             <span class="splash-name">VAYLOR</span>
         </div>
     </div>
-    <div class="app-layout">
-        <aside class="sidebar">
-            <a class="brand" href="#" aria-label="Vaylor, inicio">
-                <img class="brand-icon" src="assets/icon.png" alt="Vaylor">
-                <span><span class="brand-accent">VAYLOR</span></span>
-            </a>
 
-            <div class="side-label">MENÚ PRINCIPAL</div>
+    <!-- ══════════════════════════════════════════════════════════
+         AUTH GATE — Pantalla de inicio de sesión / registro
+         Se oculta tras autenticarse correctamente
+         ══════════════════════════════════════════════════════════ -->
+    <div id="auth-gate" class="auth-gate" role="main" aria-label="Acceso a Vaylor">
 
-            <nav class="navigation" aria-label="Navegación principal">
-                <button class="nav-link active" data-view="all">
-                    <span class="nav-icon">▦</span> Mi biblioteca
-                </button>
-                <button class="nav-link" data-view="catalog">
-                    <span class="nav-icon">🎮</span> Juegos
-                </button>
-                <button class="nav-link" data-view="playing">
-                    <span class="nav-icon">▷</span> Jugando
-                </button>
-                <button class="nav-link" data-view="completed">
-                    <span class="nav-icon">✓</span> Completados
-                </button>
-                <button class="nav-link" data-view="wishlist">
-                    <span class="nav-icon">♡</span> Lista de deseos
-                </button>
-                <button class="nav-link" data-view="favorites">
-                    <span class="nav-icon">★</span> Favoritos
-                </button>
-            </nav>
+        <!-- Fondo decorativo con orbes difusos estilo Apple -->
+        <div class="auth-gate-bg" aria-hidden="true">
+            <div class="ag-orb ag-orb-1"></div>
+            <div class="ag-orb ag-orb-2"></div>
+            <div class="ag-orb ag-orb-3"></div>
+        </div>
 
-            <div class="sidebar-bottom">
-                <div class="sidebar-promo">
-                    <div class="promo-symbol">✦</div>
-                    <strong>Tu colección,</strong>
-                    <strong>tu universo.</strong>
-                    <p>Todos tus juegos en un solo lugar.</p>
-                </div>
-                <div class="sidebar-footer">VAYLOR <span>v1.0</span></div>
+        <!-- Tarjeta central glassmorphic -->
+        <div class="auth-gate-card">
+
+            <!-- Logo y branding -->
+            <div class="auth-gate-brand">
+                <img src="assets/icon.png" alt="Vaylor" class="ag-logo">
+                <h1 class="ag-title">VAYLOR</h1>
+                <p class="ag-tagline">Tu biblioteca gaming, organizada.</p>
             </div>
-        </aside>
 
-        <main class="main-content">
-            <header class="topbar">
-                <div class="breadcrumb">
-                    <span>VAYLOR</span>
-                    <span class="muted">/</span>
-                    <strong id="breadcrumb-title">Mi biblioteca</strong>
-                </div>
-                <div class="topbar-actions">
-                    <span class="online-dot"></span>
-                    <span class="sync-label">Biblioteca local</span>
-                    <button class="avatar" title="Tu perfil" aria-label="Tu perfil"><img src="assets/icon.png"
-                            alt="Perfil"></button>
-                </div>
-            </header>
+            <!-- Tabs de navegación Login / Registro -->
+            <div class="ag-tabs" role="tablist" aria-label="Modo de acceso">
+                <button type="button" class="ag-tab active" id="ag-tab-login" role="tab"
+                    aria-selected="true" aria-controls="ag-panel-login">
+                    Iniciar sesión
+                </button>
+                <button type="button" class="ag-tab" id="ag-tab-register" role="tab"
+                    aria-selected="false" aria-controls="ag-panel-register">
+                    Crear cuenta
+                </button>
+            </div>
 
-            <section class="welcome">
-                <div>
-                    <div class="eyebrow"><span>✦</span> TU ESPACIO GAMING</div>
-                    <h1>Tu mundo.<br><span>Tu biblioteca.</span></h1>
-                    <p class="welcome-description">
-                        Todos tus juegos, aventuras y logros. Organizados a tu manera.
-                    </p>
-                </div>
-                <div class="welcome-art" aria-hidden="true">
-                    <div class="art-orbit orbit-one"></div>
-                    <div class="art-orbit orbit-two"></div>
-                    <img class="art-core" src="assets/icon.png" alt="Vaylor">
-                    <span class="art-star star-one">✦</span>
-                    <span class="art-star star-two">✧</span>
-                </div>
-            </section>
-
-            <section class="stats-grid" aria-label="Estadísticas de tu colección">
-                <article class="stat-card">
-                    <div class="stat-top">
-                        <span>Total de juegos</span>
-                        <span class="stat-icon purple">▦</span>
+            <!-- Panel: Iniciar Sesión -->
+            <div id="ag-panel-login" class="ag-panel" role="tabpanel" aria-labelledby="ag-tab-login">
+                <form id="ag-login-form" autocomplete="on" novalidate>
+                    <div class="ag-field-group">
+                        <label class="ag-label" for="ag-login-email">Correo electrónico</label>
+                        <input class="ag-input" id="ag-login-email" type="email" required
+                            placeholder="tu@correo.com" autocomplete="email">
                     </div>
-                    <strong id="total-games">0</strong>
-                    <p>En tu colección</p>
-                </article>
-                <article class="stat-card">
-                    <div class="stat-top">
-                        <span>Jugando ahora</span>
-                        <span class="stat-icon green">▷</span>
+                    <div class="ag-field-group">
+                        <label class="ag-label" for="ag-login-password">Contraseña</label>
+                        <div class="ag-password-wrap">
+                            <input class="ag-input" id="ag-login-password" type="password" required
+                                placeholder="••••••••" autocomplete="current-password">
+                            <button type="button" class="ag-eye-btn" aria-label="Mostrar u ocultar contraseña"
+                                data-target="ag-login-password">👁</button>
+                        </div>
                     </div>
-                    <strong id="playing-games">0</strong>
-                    <p>En progreso</p>
-                </article>
-                <article class="stat-card">
-                    <div class="stat-top">
-                        <span>Completados</span>
-                        <span class="stat-icon blue">✓</span>
-                    </div>
-                    <strong id="completed-games">0</strong>
-                    <p>Aventuras terminadas</p>
-                </article>
-                <article class="stat-card">
-                    <div class="stat-top">
-                        <span>Horas jugadas</span>
-                        <span class="stat-icon orange">◷</span>
-                    </div>
-                    <strong id="total-hours">0 h</strong>
-                    <p>Tiempo invertido</p>
-                </article>
-            </section>
-
-            <section class="library-section">
-                <div class="section-heading">
-                    <div>
-                        <div class="eyebrow">TU COLECCIÓN</div>
-                        <h2 id="section-title">Todos los juegos <span id="visible-count">0</span></h2>
-                    </div>
-                    <button class="primary-button" id="open-add">
-                        <span>＋</span> Añadir juego
+                    <div id="ag-login-error" class="ag-error" hidden></div>
+                    <button type="submit" class="ag-submit-btn" id="ag-login-submit">
+                        <span class="ag-btn-text">Iniciar sesión</span>
+                        <span class="ag-btn-spinner" hidden>⏳</span>
                     </button>
-                </div>
+                </form>
+            </div>
 
-                <div class="toolbar">
+            <!-- Panel: Crear Cuenta -->
+            <div id="ag-panel-register" class="ag-panel" role="tabpanel" aria-labelledby="ag-tab-register" hidden>
+                <form id="ag-register-form" autocomplete="on" novalidate>
+                    <div class="ag-field-group">
+                        <label class="ag-label" for="ag-reg-username">Nombre de usuario</label>
+                        <input class="ag-input" id="ag-reg-username" type="text" required
+                            minlength="2" maxlength="30" placeholder="Tu apodo gaming" autocomplete="username">
+                    </div>
+                    <div class="ag-field-group">
+                        <label class="ag-label" for="ag-reg-email">Correo electrónico</label>
+                        <input class="ag-input" id="ag-reg-email" type="email" required
+                            placeholder="tu@correo.com" autocomplete="email">
+                    </div>
+                    <div class="ag-field-group">
+                        <label class="ag-label" for="ag-reg-password">Contraseña</label>
+                        <div class="ag-password-wrap">
+                            <input class="ag-input" id="ag-reg-password" type="password" required
+                                minlength="6" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+                            <button type="button" class="ag-eye-btn" aria-label="Mostrar u ocultar contraseña"
+                                data-target="ag-reg-password">👁</button>
+                        </div>
+                    </div>
+                    <div id="ag-reg-error" class="ag-error" hidden></div>
+                    <button type="submit" class="ag-submit-btn" id="ag-register-submit">
+                        <span class="ag-btn-text">Crear mi cuenta</span>
+                        <span class="ag-btn-spinner" hidden>⏳</span>
+                    </button>
+                </form>
+            </div>
+
+            <p class="ag-footer-note">Tu biblioteca se guarda localmente en este dispositivo.</p>
+        </div>
+    </div>
+
+    <div class="apple-app" hidden>
+        <!-- ── Topbar con Navegación por Pestañas Segmentadas estilo Apple ── -->
+        <header class="apple-header">
+            <div class="header-inner">
+                <a class="brand" href="#" aria-label="Vaylor, inicio">
+                    <img class="brand-icon" src="assets/icon.png" alt="Vaylor">
+                    <span><span class="brand-accent">VAYLOR</span></span>
+                </a>
+
+                <!-- Pestañas Segmentadas de Navegación (Apple Segmented Tabs) -->
+                <nav class="apple-tabs-nav" aria-label="Navegación principal">
+                    <div class="tabs-track">
+                        <button class="nav-link active" data-view="all">
+                            <span class="nav-icon">▦</span>
+                            <span class="nav-label">Biblioteca</span>
+                        </button>
+                        <button class="nav-link" data-view="catalog">
+                            <span class="nav-icon">🎮</span>
+                            <span class="nav-label">Catálogo</span>
+                        </button>
+                        <button class="nav-link" data-view="playing">
+                            <span class="nav-icon">▷</span>
+                            <span class="nav-label">Jugando</span>
+                        </button>
+                        <button class="nav-link" data-view="completed">
+                            <span class="nav-icon">✓</span>
+                            <span class="nav-label">Completados</span>
+                        </button>
+                        <button class="nav-link" data-view="wishlist">
+                            <span class="nav-icon">♡</span>
+                            <span class="nav-label">Deseos</span>
+                        </button>
+                        <button class="nav-link" data-view="favorites">
+                            <span class="nav-icon">★</span>
+                            <span class="nav-label">Favoritos</span>
+                        </button>
+                    </div>
+                </nav>
+
+                <!-- Acciones Rápidas: Buscador, Tema y Perfil -->
+                <div class="header-actions">
                     <label class="search-box">
                         <span aria-hidden="true">⌕</span>
                         <input id="search-input" type="search" placeholder="Buscar videojuegos..." autocomplete="off"
@@ -152,36 +191,123 @@
                         <kbd>/</kbd>
                     </label>
 
-                    <label class="select-wrap">
-                        <span class="sr-only">Filtrar por género</span>
-                        <select id="genre-filter">
-                            <option value="all">Todos los géneros</option>
-                            <option value="RPG">RPG</option>
-                            <option value="Acción">Acción</option>
-                            <option value="Aventura">Aventura</option>
-                            <option value="Sandbox">Sandbox</option>
-                            <option value="Roguelike">Roguelike</option>
-                            <option value="Supervivencia">Supervivencia</option>
-                            <option value="Shooter">Shooter</option>
-                            <option value="Plataformas">Plataformas</option>
-                            <option value="Soulslike">Soulslike</option>
-                            <option value="Terror">Terror</option>
-                            <option value="Simulación">Simulación</option>
-                        </select>
-                    </label>
+                    <button type="button" class="theme-toggle-btn" id="theme-toggle"
+                        title="Cambiar a modo oscuro / claro" aria-label="Cambiar tema">
+                        <span class="theme-icon-sun">☀️</span>
+                        <span class="theme-icon-moon">🌙</span>
+                    </button>
 
-                    <label class="select-wrap">
-                        <span class="sr-only">Ordenar juegos</span>
+                    <button class="user-pill-btn" id="avatar-btn" title="Tu perfil y cuenta"
+                        aria-label="Tu perfil y cuenta">
+                        <span class="online-dot"></span>
+                        <span id="user-display-name" class="sync-label">Biblioteca local</span>
+                        <img id="avatar-img" class="avatar-mini" src="assets/icon.png" alt="Perfil">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- ── Contenedor Principal (Apple Canvas) ── -->
+        <main class="apple-main">
+            <!-- Fila de Cabecera: Título + Métricas Compactas de Cristal + Botón Añadir -->
+            <section class="view-hero">
+                <div class="view-title-block">
+                    <div class="view-eyebrow">COLECCIÓN GAMING</div>
+                    <div class="title-with-badge">
+                        <h1 id="section-title">Mi biblioteca</h1>
+                        <span id="visible-count" class="count-pill">0</span>
+                    </div>
+                </div>
+
+                <!-- Cápsula de Métricas de Cristal Apple (Compacta, elegante y sin estorbar) -->
+                <div class="apple-metrics-capsule" aria-label="Estadísticas de tu colección">
+                    <div class="metric-item">
+                        <span class="metric-icon purple">▦</span>
+                        <div>
+                            <span class="metric-num" id="total-games">0</span>
+                            <span class="metric-tag">Total</span>
+                        </div>
+                    </div>
+                    <div class="metric-separator"></div>
+                    <div class="metric-item">
+                        <span class="metric-icon green">▷</span>
+                        <div>
+                            <span class="metric-num" id="playing-games">0</span>
+                            <span class="metric-tag">Jugando</span>
+                        </div>
+                    </div>
+                    <div class="metric-separator"></div>
+                    <div class="metric-item">
+                        <span class="metric-icon blue">✓</span>
+                        <div>
+                            <span class="metric-num" id="completed-games">0</span>
+                            <span class="metric-tag">Hechos</span>
+                        </div>
+                    </div>
+                    <div class="metric-separator"></div>
+                    <div class="metric-item">
+                        <span class="metric-icon orange">◷</span>
+                        <div>
+                            <span class="metric-num" id="total-hours">0 h</span>
+                            <span class="metric-tag">Horas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="primary-button add-game-btn" id="open-add">
+                    <span>＋</span> Añadir juego
+                </button>
+            </section>
+
+            <!-- ── Barra de Filtros Apple: Chips de Géneros Horizontales + Ordenar ── -->
+            <section class="apple-filters-bar">
+                <div class="genre-chips-scroll" id="genre-chips-container">
+                    <button type="button" class="genre-chip active" data-genre="all">Todos</button>
+                    <button type="button" class="genre-chip" data-genre="RPG">RPG</button>
+                    <button type="button" class="genre-chip" data-genre="Acción">Acción</button>
+                    <button type="button" class="genre-chip" data-genre="Aventura">Aventura</button>
+                    <button type="button" class="genre-chip" data-genre="Sandbox">Sandbox</button>
+                    <button type="button" class="genre-chip" data-genre="Roguelike">Roguelike</button>
+                    <button type="button" class="genre-chip" data-genre="Supervivencia">Supervivencia</button>
+                    <button type="button" class="genre-chip" data-genre="Shooter">Shooter</button>
+                    <button type="button" class="genre-chip" data-genre="Plataformas">Plataformas</button>
+                    <button type="button" class="genre-chip" data-genre="Soulslike">Soulslike</button>
+                    <button type="button" class="genre-chip" data-genre="Terror">Terror</button>
+                    <button type="button" class="genre-chip" data-genre="Simulación">Simulación</button>
+                </div>
+
+                <div class="filters-end">
+                    <!-- Select oculto para sincronización con scripts existentes -->
+                    <select id="genre-filter" class="sr-only" aria-hidden="true">
+                        <option value="all">Todos los géneros</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Acción">Acción</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Sandbox">Sandbox</option>
+                        <option value="Roguelike">Roguelike</option>
+                        <option value="Supervivencia">Supervivencia</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Plataformas">Plataformas</option>
+                        <option value="Soulslike">Soulslike</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Simulación">Simulación</option>
+                    </select>
+
+                    <label class="sort-select-wrap">
+                        <span class="sort-label">Ordenar:</span>
                         <select id="sort-filter">
                             <option value="name">Nombre A–Z</option>
                             <option value="rating">Mejor puntuación</option>
                             <option value="hours">Más horas</option>
-                            <option value="recent">Añadidos recientemente</option>
+                            <option value="recent">Recientes</option>
                         </select>
                     </label>
                 </div>
+            </section>
 
-                <div id="game-grid" class="game-grid" aria-live="polite"></div>
+            <!-- ── Cuadrícula de Videojuegos con Animación Fluida de Pestañas ── -->
+            <section class="games-showcase">
+                <div id="game-grid" class="game-grid tab-animating" aria-live="polite"></div>
 
                 <div id="empty-state" class="empty-state" hidden>
                     <div class="empty-icon">⌕</div>
@@ -192,13 +318,12 @@
             </section>
 
             <footer class="main-footer">
-                <span>GAMEVAULT © <span id="current-year"></span></span>
-                <span>Hecho para amantes de los videojuegos <span class="footer-heart">♥</span></span>
+                <span>VAYLOR © <span id="current-year"></span></span>
             </footer>
         </main>
     </div>
 
-    <!-- Bottom Navigation (solo móvil) -->
+    <!-- Bottom Navigation (solo móvil iOS) -->
     <nav class="mobile-nav" style="display:none;">
         <button class="mobile-nav-btn active" data-view="all">
             <span class="mnav-icon">▦</span>
@@ -206,7 +331,7 @@
         </button>
         <button class="mobile-nav-btn" data-view="catalog">
             <span class="mnav-icon">🎮</span>
-            Juegos
+            Catálogo
         </button>
         <button class="mobile-nav-btn" data-view="playing">
             <span class="mnav-icon">▷</span>
@@ -222,6 +347,102 @@
         </button>
     </nav>
 
+    <!-- Modal Tarjeta en Primer Plano (Detalles y Acciones) -->
+    <dialog id="game-detail-dialog" class="game-detail-dialog">
+        <div class="detail-card-layout">
+            <button type="button" id="close-detail-dialog" class="detail-close-btn"
+                aria-label="Cerrar detalle">✕</button>
+
+            <!-- Portada y badge flotante -->
+            <div class="detail-cover-col">
+                <div class="detail-cover-wrap">
+                    <img id="detail-cover-img" src="" alt="Portada" class="detail-cover-img">
+                    <div id="detail-cover-placeholder" class="detail-cover-placeholder" hidden>🎮</div>
+                    <span id="detail-badge" class="detail-floating-badge">PC</span>
+                </div>
+            </div>
+
+            <!-- Información y acciones -->
+            <div class="detail-info-col">
+                <div class="detail-header">
+                    <div class="detail-eyebrows">
+                        <span id="detail-genre" class="detail-genre-tag">RPG</span>
+                        <span id="detail-platform" class="detail-platform-tag">PC</span>
+                    </div>
+                    <h2 id="detail-title" class="detail-title">Nombre del Videojuego</h2>
+                    <p id="detail-meta" class="detail-meta">Desarrollador • 2024</p>
+                </div>
+
+                <!-- Métricas clave -->
+                <div class="detail-metrics">
+                    <div class="detail-metric-card">
+                        <span class="metric-label">PUNTUACIÓN</span>
+                        <strong id="detail-rating-display" class="metric-value rating-val">★ 9.5</strong>
+                    </div>
+                    <div class="detail-metric-card">
+                        <span class="metric-label">ESTADO</span>
+                        <strong id="detail-status-display" class="metric-value status-val">En biblioteca</strong>
+                    </div>
+                    <div class="detail-metric-card" id="detail-hours-card">
+                        <span class="metric-label">TIEMPO</span>
+                        <strong id="detail-hours-display" class="metric-value">0 h jugadas</strong>
+                    </div>
+                </div>
+
+                <!-- Sección: Dar una valoración interactiva -->
+                <div class="detail-rating-section">
+                    <div class="rating-header">
+                        <span>★ Tu valoración</span>
+                        <span id="rating-selected-val" class="rating-preview-badge">8 / 10</span>
+                    </div>
+                    <div class="rating-controls">
+                        <div class="star-rating-buttons" id="star-rating-buttons">
+                            <!-- Se generan botones 1-10 dinámicamente -->
+                        </div>
+                        <button type="button" id="btn-save-rating" class="secondary-button rate-save-btn">
+                            Guardar nota
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Barra de Acciones Principales -->
+                <div class="detail-actions-panel">
+                    <div class="actions-primary-row">
+                        <button type="button" id="detail-btn-add-library" class="primary-button detail-action-btn">
+                            <span class="btn-icon">＋</span> Añadir a mi biblioteca
+                        </button>
+                        <button type="button" id="detail-btn-wishlist" class="secondary-button detail-action-btn">
+                            <span class="btn-icon">♡</span> Lista de deseos
+                        </button>
+                        <button type="button" id="detail-btn-favorite" class="icon-toggle-btn"
+                            title="Marcar como favorito">
+                            ♥
+                        </button>
+                    </div>
+
+                    <!-- Fila de opciones adicionales si ya está en biblioteca -->
+                    <div class="actions-secondary-row" id="detail-library-controls" hidden>
+                        <div class="status-change-wrap">
+                            <label for="detail-status-select">Cambiar estado:</label>
+                            <select id="detail-status-select" class="detail-select">
+                                <option value="backlog">Pendiente</option>
+                                <option value="playing">Jugando</option>
+                                <option value="completed">Completado</option>
+                                <option value="wishlist">Lista de deseos</option>
+                            </select>
+                        </div>
+                        <div class="extra-actions">
+                            <button type="button" id="detail-btn-edit" class="detail-text-btn">✏️ Editar</button>
+                            <button type="button" id="detail-btn-delete" class="detail-text-btn danger">🗑
+                                Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Modal Añadir / Editar Juego -->
     <dialog id="game-dialog" class="game-dialog">
         <form id="game-form">
             <div class="dialog-header">
@@ -240,9 +461,24 @@
             </label>
 
             <label class="form-field">
-                <span>URL de la portada</span>
-                <input id="game-cover" type="url" maxlength="1000" placeholder="https://...">
-                <small>Opcional. Puedes utilizar una URL de imagen pública.</small>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span>URL de la portada</span>
+                    <button type="button" id="btn-verify-cover" class="verify-btn"
+                        title="Verificar carátula mediante verificar_portadas.py">
+                        <span>🔍</span> Verificar con Steam
+                    </button>
+                </div>
+                <input id="game-cover" type="url" maxlength="1000"
+                    placeholder="https://... (o se verificará automáticamente)">
+                <small id="cover-status-msg">Si no indicas carátula, se verificará automáticamente mediante
+                    verificar_portadas.py.</small>
+                <div id="cover-preview-wrap" class="cover-preview-wrap" hidden>
+                    <img id="cover-preview-img" class="cover-preview-img" src="" alt="Vista previa de portada">
+                    <div class="cover-preview-info">
+                        <strong>✓ Carátula verificada</strong>
+                        <span id="cover-preview-source">Obtenida a través de verificar_portadas.py</span>
+                    </div>
+                </div>
             </label>
 
             <div class="form-row">
@@ -300,11 +536,81 @@
                 <button type="button" id="cancel-dialog" class="secondary-button">
                     Cancelar
                 </button>
-                <button type="submit" class="primary-button">
+                <button type="submit" id="save-game-btn" class="primary-button">
                     Guardar juego
                 </button>
             </div>
         </form>
+    </dialog>
+
+    <!-- Modal Autenticación y Perfil -->
+    <dialog id="auth-dialog" class="game-dialog">
+        <div class="dialog-header">
+            <div>
+                <div class="eyebrow">CUENTA DE USUARIO</div>
+                <h2 id="auth-dialog-title">Tu perfil</h2>
+            </div>
+            <button type="button" id="close-auth-dialog" class="icon-button" aria-label="Cerrar modal">✕</button>
+        </div>
+
+        <!-- Vista cuando hay sesión iniciada -->
+        <div id="auth-logged-in-view" hidden>
+            <div class="auth-user-profile">
+                <div class="auth-avatar-large" id="profile-avatar">U</div>
+                <div style="text-align: center;">
+                    <h3 id="profile-username" style="margin: 0; font-size: 18px; color: var(--text);">Usuario</h3>
+                    <p id="profile-email" style="margin: 4px 0 0; color: var(--muted); font-size: 12px;">
+                        correo@ejemplo.com</p>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center;">
+                    <button type="button" id="logout-btn" class="secondary-button">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vista cuando no hay sesión (Login / Registro) -->
+        <div id="auth-guest-view">
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab-btn active" id="tab-login">Iniciar sesión</button>
+                <button type="button" class="auth-tab-btn" id="tab-register">Crear cuenta</button>
+            </div>
+
+            <!-- Formulario Iniciar Sesión -->
+            <form id="login-form">
+                <label class="form-field">
+                    <span>Correo electrónico</span>
+                    <input id="login-email" type="email" required placeholder="tu@correo.com">
+                </label>
+                <label class="form-field">
+                    <span>Contraseña</span>
+                    <input id="login-password" type="password" required placeholder="••••••••">
+                </label>
+                <div class="dialog-actions">
+                    <button type="button" id="cancel-login" class="secondary-button">Cancelar</button>
+                    <button type="submit" class="primary-button">Iniciar sesión</button>
+                </div>
+            </form>
+
+            <!-- Formulario Crear Cuenta -->
+            <form id="register-form" hidden>
+                <label class="form-field">
+                    <span>Nombre de usuario</span>
+                    <input id="reg-username" type="text" required minlength="2" placeholder="Tu apodo gaming">
+                </label>
+                <label class="form-field">
+                    <span>Correo electrónico</span>
+                    <input id="reg-email" type="email" required placeholder="tu@correo.com">
+                </label>
+                <label class="form-field">
+                    <span>Contraseña</span>
+                    <input id="reg-password" type="password" required minlength="6" placeholder="Mínimo 6 caracteres">
+                </label>
+                <div class="dialog-actions">
+                    <button type="button" id="cancel-register" class="secondary-button">Cancelar</button>
+                    <button type="submit" class="primary-button">Crear cuenta</button>
+                </div>
+            </form>
+        </div>
     </dialog>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -313,9 +619,11 @@
         window.addEventListener('DOMContentLoaded', () => {
             const splash = document.getElementById('splash-screen');
             setTimeout(() => {
-                splash.classList.add('splash-hidden');
-                splash.addEventListener('transitionend', () => splash.remove(), { once: true });
-            }, 2000);
+                if (splash) {
+                    splash.classList.add('splash-hidden');
+                    splash.addEventListener('transitionend', () => splash.remove(), { once: true });
+                }
+            }, 800);
         });
     </script>
 </body>

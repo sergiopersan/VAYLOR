@@ -1,109 +1,159 @@
 /* ==========================================================================
-   RESPONSIVE: Media queries para diseño adaptativo en tablets y móviles
+   RESPONSIVE: Adaptación móvil y tablet para el layout Apple
    ========================================================================== */
 
-/* ── Pantallas grandes ─────────────────────────────────────────────────── */
-@media (min-width: 1500px) {
+/* ── Pantallas grandes (iMac / Studio Display) ─────────────────────────── */
+@media (min-width: 1540px) {
     .game-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
-/* ── Tablet grande ─────────────────────────────────────────────────────── */
-@media (max-width: 1200px) {
-    .main-content {
-        padding: 0 25px;
+@media (min-width: 1800px) {
+    .game-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
+/* ── Laptop / Tablet grande (< 1180px) ─────────────────────────────────── */
+@media (max-width: 1180px) {
+    .header-inner {
+        padding: 0 20px;
     }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .apple-main {
+        padding: 24px 20px 60px;
     }
 
     .game-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .welcome-art {
-        right: 0;
-        opacity: 0.65;
+    .header-actions .search-box {
+        width: 180px;
+    }
+
+    .header-actions .search-box:focus-within {
+        width: 220px;
+    }
+
+    .apple-metrics-capsule {
+        padding: 6px 16px;
+        gap: 12px;
     }
 }
 
-/* ── Tablet pequeña ────────────────────────────────────────────────────── */
-@media (max-width: 850px) {
-    .sidebar {
-        width: 72px;
-        padding: 25px 10px 14px;
-        align-items: center;
+/* ── Tablet pequeña (< 920px) ─────────────────────────────────────────── */
+@media (max-width: 920px) {
+    .apple-tabs-nav {
+        display: none; /* Se traslada al Bottom Nav estilo iOS */
     }
 
-    .brand > span:last-child,
-    .side-label,
-    .sidebar-promo,
-    .sidebar-footer {
-        display: none;
+    .apple-header {
+        height: 62px;
     }
 
-    .navigation {
+    .header-inner {
+        height: 62px;
+    }
+
+    .header-actions .search-box {
+        width: 160px;
+    }
+
+    .header-actions .search-box:focus-within {
+        width: 200px;
+    }
+
+    .view-hero {
+        gap: 16px;
+    }
+
+    .apple-metrics-capsule {
+        order: 3;
         width: 100%;
-    }
-
-    .nav-link {
-        justify-content: center;
-        padding: 12px 0;
-        font-size: 0;
-    }
-
-    .nav-icon {
-        font-size: 20px;
-    }
-
-    .main-content {
-        margin-left: 72px;
-        padding: 0 20px;
-    }
-
-    .toolbar {
-        flex-wrap: wrap;
-    }
-
-    .search-box {
-        flex-basis: 100%;
-    }
-
-    .select-wrap,
-    .select-wrap select {
-        flex: 1;
-        max-width: none;
-        min-width: 0;
-    }
-
-    .welcome {
-        padding: 30px;
-    }
-
-    .welcome-art {
-        right: -90px;
-        opacity: 0.35;
+        justify-content: space-around;
     }
 }
 
-/* ── Móvil ─────────────────────────────────────────────────────────────── */
-@media (max-width: 520px) {
+/* ── Móvil iOS (< 640px) ───────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .apple-header {
+        height: 58px;
+    }
 
-    /* Ocultar sidebar lateral completamente */
-    .sidebar {
+    .header-inner {
+        height: 58px;
+        padding: 0 14px;
+        gap: 10px;
+    }
+
+    .header-actions .search-box {
+        display: none; /* En móvil se puede buscar o usar el filtro */
+    }
+
+    .sync-label {
         display: none;
     }
 
-    /* Contenido ocupa todo el ancho */
-    .main-content {
-        margin-left: 0;
-        padding: 0 14px;
-        padding-bottom: 84px; /* espacio para el bottom nav */
+    .user-pill-btn {
+        padding: 0 6px;
+        height: 34px;
     }
 
-    /* ── Bottom Navigation Bar — estilo Apple iOS ───────────────────── */
+    .apple-main {
+        padding: 16px 14px 90px;
+    }
+
+    .view-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .add-game-btn {
+        width: 100%;
+        height: 42px;
+    }
+
+    .apple-metrics-capsule {
+        padding: 10px 14px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        border-radius: var(--radius-lg);
+    }
+
+    .metric-separator {
+        display: none;
+    }
+
+    .apple-filters-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .filters-end {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    /* Cuadrícula en móvil: 2 columnas limpias */
+    .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 10px;
+    }
+
+    .game-info {
+        padding: 10px 10px 12px;
+    }
+
+    .game-title {
+        font-size: 13px;
+    }
+
+    /* ── Bottom Navigation Bar — estilo Apple iOS ───────────────────────── */
     .mobile-nav {
         display: flex !important;
         position: fixed;
@@ -111,16 +161,15 @@
         left: 0;
         right: 0;
         z-index: 100;
-
-        /* Frosted glass */
-        background: rgba(16, 12, 28, 0.72);
-        backdrop-filter: blur(28px) saturate(180%);
-        -webkit-backdrop-filter: blur(28px) saturate(180%);
-
-        border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+        background: var(--topbar-bg);
+        backdrop-filter: var(--backdrop-blur);
+        -webkit-backdrop-filter: var(--backdrop-blur);
+        border-top: 0.5px solid var(--border);
         padding: 6px 0 env(safe-area-inset-bottom, 10px);
         justify-content: space-around;
         align-items: stretch;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+        transition: var(--transition-theme);
     }
 
     .mobile-nav-btn {
@@ -128,35 +177,31 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 4px;
+        gap: 3px;
         flex: 1;
         background: transparent;
         border: none;
-        color: rgba(160, 155, 185, 0.65);
+        color: var(--text-tertiary);
         font-size: 10px;
         font-weight: 500;
-        letter-spacing: 0;
-        padding: 4px 2px 2px;
+        padding: 6px 2px 2px;
         cursor: pointer;
-        transition: color 220ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                    transform 120ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        font-family: -apple-system, 'Inter', sans-serif;
+        transition: all 0.2s var(--ease-apple);
         position: relative;
         -webkit-tap-highlight-color: transparent;
     }
 
-    /* Pip / indicador activo arriba del icono */
     .mobile-nav-btn::before {
         content: '';
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%) scaleX(0);
-        width: 28px;
+        width: 24px;
         height: 3px;
         border-radius: 0 0 3px 3px;
-        background: #a78bfa;
-        transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        background: var(--accent);
+        transition: transform 0.25s var(--ease-spring);
     }
 
     .mobile-nav-btn.active::before {
@@ -164,13 +209,14 @@
     }
 
     .mobile-nav-btn .mnav-icon {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 1;
-        transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        transition: transform 0.2s var(--ease-spring);
     }
 
     .mobile-nav-btn.active {
-        color: #c4b5fd;
+        color: var(--accent);
+        font-weight: 600;
     }
 
     .mobile-nav-btn.active .mnav-icon {
@@ -181,140 +227,25 @@
         transform: scale(0.92);
     }
 
-
-    /* Topbar */
-    .topbar {
-        height: 58px;
+    /* Modal Sheet de iOS */
+    .game-dialog {
+        width: 100%;
+        max-width: 100%;
+        margin: auto 0 0;
+        border-radius: 24px 24px 0 0;
+        padding: 24px 20px;
     }
 
-    .sync-label,
-    .online-dot {
-        display: none;
-    }
-
-    /* Hero / Welcome */
-    .welcome {
-        min-height: 180px;
-        padding: 20px 18px;
-        margin-top: 14px;
-        margin-bottom: 18px;
-        border-radius: 14px;
-    }
-
-    .welcome h1 {
-        font-size: 28px;
-        letter-spacing: -1px;
-        margin: 10px 0 8px;
-    }
-
-    .welcome-description {
-        font-size: 11px;
-        max-width: 230px;
-    }
-
-    .welcome-art {
-        right: -130px;
-        opacity: 0.25;
-    }
-
-    .eyebrow {
-        font-size: 9px;
-    }
-
-    /* Stats */
-    .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px;
-        margin-bottom: 24px;
-    }
-
-    .stat-card {
-        padding: 12px;
-        border-radius: 12px;
-    }
-
-    .stat-top {
-        font-size: 10px;
-        margin-bottom: 6px;
-    }
-
-    .stat-card > strong {
-        font-size: 24px;
-    }
-
-    .stat-card > p {
-        font-size: 10px;
-    }
-
-    /* Section heading */
-    .section-heading {
-        align-items: flex-start;
+    .form-row {
+        grid-template-columns: 1fr;
         gap: 10px;
-        flex-wrap: wrap;
     }
 
-    .section-heading h2 {
-        font-size: 17px;
-    }
-
-    .section-heading > .primary-button {
-        padding: 0 12px;
-        height: 36px;
-        font-size: 11px;
-    }
-
-    /* Toolbar */
-    .toolbar {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .search-box {
-        flex-basis: 100%;
-    }
-
-    .select-wrap {
-        flex: 1;
-        min-width: 0;
-    }
-
-    /* Game grid */
-    .game-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px 10px;
-    }
-
-    .game-info {
-        padding: 9px 8px;
-    }
-
-    .game-title {
-        font-size: 11px;
-    }
-
-    .card-action {
-        font-size: 9px;
-    }
-
-    /* Footer */
     .main-footer {
         flex-direction: column;
         align-items: center;
         gap: 6px;
         text-align: center;
-    }
-
-    /* Dialog: aparece desde abajo */
-    .game-dialog {
-        width: 100%;
-        max-width: 100%;
-        margin: auto 0 0;
-        border-radius: 18px 18px 0 0;
-        padding: 20px 16px;
-    }
-
-    .form-row {
-        flex-direction: column;
     }
 }
 

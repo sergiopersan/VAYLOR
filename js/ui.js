@@ -1,5 +1,5 @@
 // --------------------------------------------------
-// GAMEVAULT — Módulo de Interfaz de Usuario (UI)
+// GAMEVAULT / VAYLOR — Módulo de Interfaz de Usuario (UI)
 // --------------------------------------------------
 
 import { STATUS_LABELS, STATUS_CLASSES } from "./storage.js";
@@ -16,7 +16,9 @@ export function escapeHTML(value) {
 }
 
 export function getCoverURL(game) {
-    if (game.cover) return game.cover;
+    if (game.cover && typeof game.cover === "string" && game.cover.trim()) {
+        return game.cover.trim();
+    }
 
     if (game.appId) {
         return `https://cdn.akamai.steamstatic.com/steam/apps/${game.appId}/library_600x900.jpg`;
@@ -25,7 +27,7 @@ export function getCoverURL(game) {
     return "";
 }
 
-export function showToast(message) {
+export function showToast(message, duration = 3000) {
     const toastElement = document.querySelector("#toast");
     if (!toastElement) return;
 
@@ -36,7 +38,7 @@ export function showToast(message) {
 
     toastTimer = setTimeout(() => {
         toastElement.classList.remove("show");
-    }, 2600);
+    }, duration);
 }
 
 export function renderStats(games) {
@@ -61,7 +63,7 @@ export function renderStats(games) {
 
     if (hoursEl) {
         const totalHours = games.reduce(
-            (total, game) => total + game.hours,
+            (total, game) => total + (Number(game.hours) || 0),
             0
         );
         hoursEl.textContent = `${totalHours.toLocaleString("es-ES")} h`;
@@ -78,9 +80,9 @@ export function renderLibraryCard(game) {
       loading="lazy"
       referrerpolicy="no-referrer"
       data-cover-image
-      onerror="this.hidden=true; this.nextElementSibling.hidden=false">
-     <div class="cover-placeholder" hidden aria-hidden="true">G</div>`
-        : `<div class="cover-placeholder" aria-label="Sin portada">G</div>`;
+      onerror="this.hidden=true; if(this.nextElementSibling) this.nextElementSibling.hidden=false;">
+     <div class="cover-placeholder" hidden aria-hidden="true">🎮</div>`
+        : `<div class="cover-placeholder" aria-label="Sin portada">🎮</div>`;
 
     const favoriteLabel = game.favorite
         ? "Quitar de favoritos"
@@ -91,8 +93,8 @@ export function renderLibraryCard(game) {
         <div class="cover-wrap">
           ${coverMarkup}
 
-          <span class="status-badge ${STATUS_CLASSES[game.status]}">
-            ${escapeHTML(STATUS_LABELS[game.status])}
+          <span class="status-badge ${STATUS_CLASSES[game.status] || 'status-backlog'}">
+            ${escapeHTML(STATUS_LABELS[game.status] || 'Pendiente')}
           </span>
 
           <button
@@ -113,11 +115,11 @@ export function renderLibraryCard(game) {
 
           <div class="game-meta">
             <span>${escapeHTML(game.platform)}</span>
-            <span class="game-rating">★ ${game.rating.toLocaleString("es-ES")}</span>
+            <span class="game-rating">★ ${Number(game.rating || 0).toLocaleString("es-ES")}</span>
           </div>
 
           <div class="game-meta" style="margin-top: 7px">
-            <span>${game.hours.toLocaleString("es-ES")} h jugadas</span>
+            <span>${Number(game.hours || 0).toLocaleString("es-ES")} h jugadas</span>
           </div>
 
           <div class="card-actions">
@@ -129,36 +131,4 @@ export function renderLibraryCard(game) {
         </div>
       </article>
     `;
-}
-
-export function openAddDialog(form, dialog) {
-    form.reset();
-
-    document.querySelector("#game-id").value = "";
-    document.querySelector("#game-hours").value = "0";
-    document.querySelector("#game-rating").value = "8";
-    document.querySelector("#dialog-title").textContent = "Añadir videojuego";
-
-    dialog.showModal();
-    document.querySelector("#game-name").focus();
-}
-
-export function openEditDialog(id, games, form, dialog) {
-    const game = games.find(item => item.id === id);
-    if (!game) return;
-
-    form.reset();
-
-    document.querySelector("#game-id").value = String(game.id);
-    document.querySelector("#dialog-title").textContent = "Editar videojuego";
-    document.querySelector("#game-name").value = game.name;
-    document.querySelector("#game-cover").value = game.cover;
-    document.querySelector("#game-genre").value = game.genre;
-    document.querySelector("#game-platform").value = game.platform;
-    document.querySelector("#game-status").value = game.status;
-    document.querySelector("#game-hours").value = String(game.hours);
-    document.querySelector("#game-rating").value = String(game.rating);
-
-    dialog.showModal();
-    document.querySelector("#game-name").focus();
 }

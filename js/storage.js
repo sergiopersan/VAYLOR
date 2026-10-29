@@ -1,8 +1,10 @@
 // --------------------------------------------------
-// GAMEVAULT — Módulo de Almacenamiento (LocalStorage)
+// GAMEVAULT / VAYLOR — Módulo de Almacenamiento (LocalStorage)
 // --------------------------------------------------
 
-export const STORAGE_KEY = "gamevault-library-v1";
+import { getUserStorageKey } from "./auth.js";
+
+export const LEGACY_STORAGE_KEY = "gamevault-library-v1";
 
 export const STATUS_LABELS = {
     backlog: "Pendiente",
@@ -23,6 +25,7 @@ export const initialGames = [
         id: 1,
         name: "Elden Ring",
         appId: 1245620,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
         genre: "RPG",
         platform: "PC",
         status: "playing",
@@ -34,6 +37,7 @@ export const initialGames = [
         id: 2,
         name: "Cyberpunk 2077",
         appId: 1091500,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
         genre: "RPG",
         platform: "PC",
         status: "playing",
@@ -45,6 +49,7 @@ export const initialGames = [
         id: 3,
         name: "Red Dead Redemption 2",
         appId: 1174180,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/1174180/library_600x900.jpg",
         genre: "Aventura",
         platform: "PC",
         status: "completed",
@@ -56,6 +61,7 @@ export const initialGames = [
         id: 4,
         name: "Hades",
         appId: 1145360,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/1145360/library_600x900.jpg",
         genre: "Roguelike",
         platform: "PC",
         status: "completed",
@@ -67,6 +73,7 @@ export const initialGames = [
         id: 5,
         name: "The Witcher 3",
         appId: 292030,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/292030/library_600x900.jpg",
         genre: "RPG",
         platform: "PC",
         status: "backlog",
@@ -78,6 +85,7 @@ export const initialGames = [
         id: 6,
         name: "Hollow Knight",
         appId: 367520,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/367520/library_600x900.jpg",
         genre: "Aventura",
         platform: "PC",
         status: "completed",
@@ -89,6 +97,7 @@ export const initialGames = [
         id: 7,
         name: "Stardew Valley",
         appId: 413150,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/413150/library_600x900.jpg",
         genre: "Simulación",
         platform: "PC",
         status: "playing",
@@ -100,6 +109,7 @@ export const initialGames = [
         id: 8,
         name: "Grand Theft Auto V",
         appId: 271590,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/271590/library_600x900.jpg",
         genre: "Acción",
         platform: "PC",
         status: "completed",
@@ -111,6 +121,7 @@ export const initialGames = [
         id: 9,
         name: "Portal 2",
         appId: 620,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/620/library_600x900.jpg",
         genre: "Aventura",
         platform: "PC",
         status: "completed",
@@ -122,6 +133,7 @@ export const initialGames = [
         id: 10,
         name: "Baldur's Gate 3",
         appId: 1086940,
+        cover: "https://cdn.akamai.steamstatic.com/steam/apps/1086940/library_600x900.jpg",
         genre: "RPG",
         platform: "PC",
         status: "backlog",
@@ -132,22 +144,22 @@ export const initialGames = [
 ];
 
 export function normalizeGame(game) {
+    const rawCover = typeof game.cover === "string" ? game.cover.trim() : "";
+    const appId = Number.isInteger(Number(game.appId)) && game.appId !== null && game.appId !== ""
+        ? Number(game.appId)
+        : null;
+
+    // Si no tiene cover explícito pero tiene appId de Steam, construirlo
+    const cover = rawCover || (appId ? `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900.jpg` : "");
+
     return {
-        id: Number(game.id),
-        name: String(game.name || "Juego sin título").slice(0, 80),
-        appId: Number.isInteger(Number(game.appId)) &&
-            game.appId !== null && game.appId !== ""
-            ? Number(game.appId)
-            : null,
-        cover: typeof game.cover === "string" &&
-            game.cover.length <= 1000
-            ? game.cover
-            : "",
+        id: Number(game.id) || Date.now(),
+        name: String(game.name || game.title || "Juego sin título").slice(0, 80),
+        appId,
+        cover: cover.slice(0, 1000),
         genre: String(game.genre || "Otro"),
         platform: String(game.platform || "PC"),
-        status: Object.hasOwn(STATUS_LABELS, game.status)
-            ? game.status
-            : "backlog",
+        status: Object.hasOwn(STATUS_LABELS, game.status) ? game.status : "backlog",
         hours: Math.max(0, Math.min(100000, Number(game.hours) || 0)),
         rating: Math.max(0, Math.min(10, Number(game.rating) || 0)),
         favorite: Boolean(game.favorite),
@@ -157,32 +169,35 @@ export function normalizeGame(game) {
 
 export function loadGames() {
     try {
-        const saved = localStorage.getItem(STORAGE_KEY);
+        const key = getUserStorageKey();
+        let saved = localStorage.getItem(key);
+
+        // Migración transparente si existía data en LEGACY_STORAGE_KEY
+        if (saved === null && key === "vaylor-library-v1-guest") {
+            const legacy = localStorage.getItem(LEGACY_STORAGE_KEY);
+            if (legacy !== null) {
+                saved = legacy;
+                localStorage.setItem(key, legacy);
+            }
+        }
 
         if (saved !== null) {
             const parsed = JSON.parse(saved);
-
-            if (!Array.isArray(parsed)) {
-                throw new Error("El formato de los datos guardados no es válido.");
+            if (Array.isArray(parsed)) {
+                return parsed.map(normalizeGame);
             }
-
-            return parsed.map(normalizeGame);
         }
     } catch (error) {
         console.error("No se pudo cargar la biblioteca:", error);
     }
 
-    return initialGames.map((game, index) =>
-        normalizeGame({
-            ...game,
-            addedAt: Date.now() - (initialGames.length - index) * 1000
-        })
-    );
+    return [];
 }
 
 export function saveGames(games) {
     try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(games));
+        const key = getUserStorageKey();
+        localStorage.setItem(key, JSON.stringify(games));
         return true;
     } catch (error) {
         console.error("No se pudo guardar la biblioteca:", error);

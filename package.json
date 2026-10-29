@@ -1,8 +1,10 @@
 {
-  "name": "gamevault",
+  "name": "vaylor",
   "version": "1.0.0",
-  "description": "GameVault - Biblioteca de videojuegos",
+  "description": "Vaylor - Biblioteca personal y catálogo de videojuegos",
   "scripts": {
-    "start": "node -e \"const http=require('http'),fs=require('fs'),path=require('path'),mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json'};http.createServer((req,res)=>{const f=path.join(process.cwd(),req.url==='/'?'index.html':req.url.split('?')[0]);if(fs.existsSync(f)){res.writeHead(200,{'Content-Type':mime[path.extname(f)]||'text/plain'});fs.createReadStream(f).pipe(res);}else{res.writeHead(404);res.end('Not found');}}).listen(5501,'127.0.0.1',()=>console.log('Servidor en http://127.0.0.1:5501/'));\""
+    "start": "node server.js",
+    "verify-covers": "python data/verificar_portadas.py",
+    "verify": "python data/verificar_portadas.py"
   }
 }
